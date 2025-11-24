@@ -131,7 +131,7 @@ const AboutUs = () => {
       <section className="about-section">
         <div className="about-content">
           <div className="about-images">
-            <div className="image-collage">img16
+            <div className="image-collage">
 
               {/* Our journey */}
               <img src={meeting10} alt="Event 1" className="img img-1" />
