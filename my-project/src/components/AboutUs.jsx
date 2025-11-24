@@ -134,9 +134,9 @@ const AboutUs = () => {
             <div className="image-collage">
 
               {/* Our journey */}
-              <img src={meeting10} alt="Event 1" className="img img-1" />
-          <img src={meeting11} alt="Event 2" className="img img-2" />
-              <img src={img22} alt="Event 3" className="img img-3" />
+              <img src={img22} alt="Event 1" className="img img-1" />
+          <img src={meeting10} alt="Event 2" className="img img-2" />
+              <img src={meeting11} alt="Event 3" className="img img-3" />
             </div>
           </div>
 
