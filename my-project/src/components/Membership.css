@@ -33,6 +33,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  align-items: stretch; /* ensures equal height */
 }
 
 /*  CARD BASE */
@@ -45,11 +46,12 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 25px 20px;
   text-align: center;
   transition: all 0.3s ease;
-  min-height: 620px;
+
+  min-height: 60px; 
+
   position: relative;
   overflow: hidden;
 }
@@ -66,7 +68,7 @@
 }
 
 .plan-content {
-  flex: 1;
+  flex-grow: 1;  
   z-index: 1;
   position: relative;
 }
@@ -121,7 +123,9 @@
   z-index: 2;
 }
 
-.plan-box.platinum {
+/* ========== LIFE PLAN ========== */
+
+.plan-box.life {
   background: linear-gradient(145deg, #fafafa, #e8e8e8, #ffffff);
   border-top: 6px solid #7b1fa2;
   border-radius: 14px;
@@ -132,8 +136,8 @@
   transition: all 0.4s ease;
 }
 
-/* Add subtle shimmer gradient overlay */
-.plan-box.platinum::before {
+/* Shimmer Effect */
+.plan-box.life::before {
   content: "";
   position: absolute;
   top: 0; left: -100%;
@@ -141,21 +145,20 @@
   background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.25), rgba(255,255,255,0.1));
   transition: all 0.6s ease;
 }
-.plan-box.platinum:hover::before {
+
+.plan-box.life:hover::before {
   left: 100%;
 }
 
 /* Title */
-.plan-box.platinum h2 {
+.plan-box.life h2 {
   color: #6a1b9a;
   font-weight: 700;
   font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 /* Price */
-.plan-box.platinum .price {
+.plan-box.life .price {
   color: #4a148c;
   font-size: 2.2rem;
   font-weight: 800;
@@ -163,45 +166,39 @@
 }
 
 /* Button */
-.plan-box.platinum .buy-btn {
+.plan-box.life .buy-btn {
   background: linear-gradient(90deg, #7b1fa2, #ab47bc, #ce93d8);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
   box-shadow: 0 0 15px rgba(171, 71, 188, 0.5);
-  transition: all 0.3s ease;
 }
 
-.plan-box.platinum .buy-btn:hover {
+.plan-box.life .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px rgba(156, 39, 176, 0.7),
               inset 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* Hover animation */
-.plan-box.platinum:hover {
+.plan-box.life:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 40px rgba(156, 39, 176, 0.3);
 }
 
-/*  GOLD  */
+/* ========== PLATINUM PLAN ========== */
 
-.plan-box.executive {
+.plan-box.platinum {
   background: linear-gradient(145deg, #fff9c4, #ffecb3, #fff8e1);
   border-top: 6px solid #fbc02d;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
   box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+  transition: all 0.4s ease;
   border-radius: 14px;
+  position: relative;
 }
-.plan-box.executive:hover {
+
+.plan-box.platinum:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 40px rgba(96, 125, 139, 0.3);
 }
 
-.plan-box.executive::before {
+.plan-box.platinum::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -217,179 +214,197 @@
   transition: all 0.6s ease;
 }
 
-.plan-box.executive:hover::before {
+.plan-box.platinum:hover::before {
   left: 100%;
 }
 
-.plan-box.executive h2 {
+.plan-box.platinum h2 {
   color: #f57f17;
   font-weight: 700;
 }
 
-.plan-box.executive .price {
+.plan-box.platinum .price {
   color: #f9a825;
   font-size: 2.2rem;
   font-weight: 800;
   text-shadow: 0 2px 5px rgba(249, 168, 37, 0.25);
 }
 
-.plan-box.executive .buy-btn {
+.plan-box.platinum .buy-btn {
   background: linear-gradient(90deg, #f57f17, #fbc02d, #ffe082);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
   box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
-  transition: all 0.3s ease;
 }
 
-.plan-box.executive .buy-btn:hover {
+.plan-box.platinum .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px rgba(255, 193, 7, 0.7),
               inset 0 0 10px rgba(255, 255, 255, 0.4);
 }
-.plan-box.gold { display: none !important; }
 
-.plan-box.silver {
+/* ========== GOLD PLAN ========== */
+
+.plan-box.gold {
   background: linear-gradient(145deg, #f5f5f5, #e0e0e0, #fafafa);
   border-top: 6px solid #607d8b;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
   box-shadow: 0 8px 25px rgba(96, 125, 139, 0.2);
   border-radius: 14px;
+  transition: all 0.4s ease;
+  position: relative;
 }
 
-.plan-box.silver::before {
+.plan-box.gold::before {
   content: "";
   position: absolute;
   top: 0; 
   left: -100%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.1)
-  );
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255,255,255,0.25), rgba(255,255,255,0.1));
   transition: all 0.6s ease;
 }
-.plan-box.silver:hover::before {
+
+.plan-box.gold:hover::before {
   left: 100%;
 }
 
-
-.plan-box.silver h2 {
+.plan-box.gold h2 {
   color: #37474f;
   font-weight: 700;
   font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* Price */
-.plan-box.silver .price {
+.plan-box.gold .price {
   color: #455a64;
   font-size: 2.2rem;
   font-weight: 800;
-  text-shadow: 0 2px 5px rgba(69, 90, 100, 0.25);
 }
 
-/* Button */
-.plan-box.silver .buy-btn {
+.plan-box.gold .buy-btn {
   background: linear-gradient(90deg, #607d8b, #90a4ae, #b0bec5);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
   box-shadow: 0 0 15px rgba(96, 125, 139, 0.4);
-  transition: all 0.3s ease;
 }
 
-.plan-box.silver .buy-btn:hover {
+.plan-box.gold .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px rgba(96, 125, 139, 0.6),
               inset 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* Hover motion */
-.plan-box.silver:hover {
+.plan-box.gold:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 15px 40px rgba(96, 125, 139, 0.3);
 }
 
+/* ========== SILVER PLAN ========== */
 
-.plan-box.primary {
+.plan-box.silver {
   background: linear-gradient(145deg, #e3f2fd, #bbdefb, #e8f5fe);
   border-top: 6px solid #1976d2;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.2);
   border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.2);
+  transition: all 0.4s ease;
 }
 
-
-.plan-box.primary::before {
+.plan-box.silver::before {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.1)
-  );
-  transition: all 0.6s ease;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+  transition: 0.6s ease;
 }
-.plan-box.primary:hover::before {
+
+.plan-box.silver:hover::before {
   left: 100%;
 }
 
-/* Title */
-.plan-box.primary h2 {
+.plan-box.silver h2 {
   color: #0d47a1;
   font-weight: 700;
   font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* Price */
-.plan-box.primary .price {
+.plan-box.silver .price {
   color: #1565c0;
   font-size: 2.2rem;
   font-weight: 800;
-  text-shadow: 0 2px 5px rgba(21, 101, 192, 0.25);
 }
 
-/* Button */
-.plan-box.primary .buy-btn {
+.plan-box.silver .buy-btn {
   background: linear-gradient(90deg, #1976d2, #42a5f5, #64b5f6);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  box-shadow: 0 0 15px rgba(33, 150, 243, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(33,150,243,0.4);
 }
 
-.plan-box.primary .buy-btn:hover {
+.plan-box.silver .buy-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(33, 150, 243, 0.6),
-              inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 25px rgba(33,150,243,0.6),
+              inset 0 0 10px rgba(255,255,255,0.4);
 }
 
-/* Hover motion */
-.plan-box.primary:hover {
+.plan-box.silver:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(33, 150, 243, 0.3);
+  box-shadow: 0 15px 40px rgba(33,150,243,0.3);
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.key-features-box {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto 0;
+  padding: 35px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f7f7f7, #ffffff);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  text-align: left;
+  border-top: 6px solid #002c8a;
+  transition: 0.3s ease;
+}
+
+.key-features-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+
+.key-features-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+ color: #444;
+  position: relative;
+}
+
+.key-features-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #002c8a, #ff4d4d);
+  border-radius: 2px;
+}
+
+.key-features-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.key-features-list li::before {
+  content: "✔ ";
+  color: #002c8a;
+  font-weight: 700;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
