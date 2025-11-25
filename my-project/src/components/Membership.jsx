@@ -94,9 +94,9 @@ const Membership = () => {
   <h2 className="key-features-title">Key Features</h2>
 
   <ul className="key-features-list">
-    <li>All official publications will be send to members.</li>
+    <li>All official publications of the Chamber will be send to members.</li>
     <li>Right to participate in all programms conducted by the Chamber.</li>
-    <li>Concessional rates applicable for training programms.</li>
+    <li>Concessional rates applicable for training programmes.</li>
     <li>Regular updates and information shared from time to time.</li>
     <li>Right to receive guidance,support and assistance from the Chanber.</li>
   </ul>
