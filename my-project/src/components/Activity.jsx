@@ -3,9 +3,9 @@ import banner from "../assets/theme.jpg";
 import React, { useEffect, useState } from "react";
 
 
-import meeting1 from "../assets/download.jpg";
-import meeting2 from "../assets/event1.jpg";
-import meeting3 from "../assets/event2.jpg";
+import meeting1 from "../assets/event21.jpg";
+import meeting2 from "../assets/event22.jpg";
+import meeting3 from "../assets/event17.jpg";
 import meeting4 from "../assets/event4.jpg";
 
 function Activity() {
