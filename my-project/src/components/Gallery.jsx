@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Gallery.css";
 import banner from "../assets/theme.jpg";
-import img1 from "../assets/event3.jpg";
-import img3 from "../assets/event1.jpg";
-import img4 from "../assets/events.jpg";
-import img5 from "../assets/we.jpg";
-import img6 from "../assets/yes.jpg";
-import img7 from "../assets/event2.jpg";
-import img8 from "../assets/we1.jpg";
+
 import img9 from "../assets/event4.jpg";
 import img10 from "../assets/event5.jpg";
 import img11 from "../assets/event6.jpg";
@@ -16,7 +10,6 @@ import img13 from "../assets/event8.jpg";
 import img14 from "../assets/event10.jpg";
 import img15 from "../assets/event11.jpg";
 import img16 from "../assets/event12.jpg";
-import img17 from "../assets/event13.jpg";
 import img18 from "../assets/event14.jpg";
 import img19 from "../assets/event15.jpg";
 import img20 from "../assets/event16.jpg";
@@ -32,40 +25,67 @@ import img29 from "../assets/event25.jpg";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
 
-
-
 const Gallery = () => {
   const [animate, setAnimate] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [videoUrl, setVideoUrl] = useState(null);
 
   const images = [
-    img28,img29,img30,img31,
-    img15,img16,img18,img19,img20,img21,img22,img23,img25
-    ,img24,img26,img27
-    ,img1, img3, img4, img5, img6, img7,
-    img8, img9, img10, img11, img12, img13, img14
+    img28, img29, img30, img31,
+    img15, img16, img18, img19,
+    img20, img21, img22, img23,
+    img25, img24, img26, img27,
+    img9, img10, img11, img12, img13
   ];
+
+  const videos = [
+    "https://youtu.be/MTjFZm6t7oc?si=ZYI0O-feg4S2LuXm",
+    "https://youtu.be/jLZ06leBbK8?si=WK7exqhkO59ye4sd",
+    "https://youtu.be/8cQ4NVcHykg?si=v3FgTwwVyFErsI-k",
+    "https://youtu.be/1_O7XhFYVSs?si=zBdRhlGFL52xgjwr",
+    "https://youtu.be/WYq11Zb1S5o?si=-eSvCA4IabUL92vN",
+    
+    "https://youtu.be/ivxepdPe4gM?si=8yfgHWWfXGoPhQWA",
+    "https://youtu.be/Shy35rNcWq0?si=x1kA7ntObtRAHm4u",
+  ];
+
+  const getYouTubeID = (url) => {
+    if (!url) return null;
+    try {
+      const parsed = new URL(url);
+      const idFromV = parsed.searchParams.get("v");
+      if (idFromV) return idFromV;
+      if (parsed.hostname === "youtu.be") {
+        return parsed.pathname.replace("/", "").split("?")[0];
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  };
+
+  const mixedGallery = [];
+  let imgIndex = 0;
+  let videoIndex = 0;
+
+  while (imgIndex < images.length) {
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+
+    if (videos[videoIndex]) {
+      mixedGallery.push({ type: "video", url: videos[videoIndex++] });
+    }
+  }
 
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const openLightbox = (index) => setLightboxIndex(index);
-  const closeLightbox = () => setLightboxIndex(null);
-
-  const nextImg = () =>
-    setLightboxIndex((lightboxIndex + 1) % images.length);
-
-  const prevImg = () =>
-    setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
-
   return (
     <>
       <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
+        
         <section
           className="about-hero1"
           style={{ backgroundImage: `url(${banner})` }}
@@ -75,29 +95,70 @@ const Gallery = () => {
           </div>
         </section>
 
-        <div className="gallery-page">
-          <div className="gallery-grid">
-            {images.map((src, index) => (
-              <div
-                className="gallery-item"
-                key={index}
-                onClick={() => openLightbox(index)}
-              >
-                <img src={src} alt={`Gallery ${index + 1}`} />
-              </div>
-            ))}
-          </div>
+        {/* HEADINGS ROW */}
+        <div className="heading-row">
+          <span className="photos-heading">Photos</span>
+          <span className="videos-heading">Videos</span>
+        </div>
+
+        {/* GALLERY GRID */}
+        <div className="gallery-grid">
+          {mixedGallery.map((item, index) => {
+            if (item.type === "img") {
+              return (
+                <div
+                  key={index}
+                  className="gallery-item"
+                  onClick={() => setLightboxIndex(images.indexOf(item.src))}
+                >
+                  <img src={item.src} alt="" />
+                </div>
+              );
+            }
+
+            if (item.type === "video") {
+              const videoID = getYouTubeID(item.url);
+              return (
+                <div
+                  key={index}
+                  className="gallery-item youtube-box"
+                  onClick={() => setVideoUrl(item.url)}
+                >
+                  <img src={`https://img.youtube.com/vi/${videoID}/hqdefault.jpg`} />
+                  <span className="youtube-play-btn">▶</span>
+                </div>
+              );
+            }
+
+            return null;
+          })}
         </div>
       </div>
 
+      {/* IMAGE LIGHTBOX */}
       {lightboxIndex !== null && (
-        <div className="lightbox">
-          <span className="lightbox-close" onClick={closeLightbox}>×</span>
-          <span className="lightbox-arrow left" onClick={prevImg}>❮</span>
-          <div className="lightbox-content">
+        <div className="lightbox" onClick={() => setLightboxIndex(null)}>
+          <span className="lightbox-close">×</span>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <img src={images[lightboxIndex]} alt="" />
           </div>
-          <span className="lightbox-arrow right" onClick={nextImg}>❯</span>
+        </div>
+      )}
+
+      {/* VIDEO LIGHTBOX */}
+      {videoUrl && (
+        <div className="lightbox" onClick={() => setVideoUrl(null)}>
+          <span className="lightbox-close">×</span>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              width="100%"
+              height="700px"
+              src={`https://www.youtube.com/embed/${getYouTubeID(videoUrl)}?autoplay=1`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
         </div>
       )}
     </>

@@ -88,8 +88,8 @@
 }
 
 .gst {
-  font-size: 0.9rem;
-  color: #444;
+  font-size: 0.95rem;
+  color: #333;
   margin-bottom: 15px;
 }
 
@@ -126,7 +126,7 @@
 /* LIFE PLAN  */
 
 .plan-box.life {
-  background: linear-gradient(145deg, #fafafa, #e8e8e8, #ffffff);
+ background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
   border-top: 6px solid #7b1fa2;
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(123, 31, 162, 0.15),
@@ -150,7 +150,7 @@
 
 /* Title */
 .plan-box.life h2 {
-  color: #6a1b9a;
+  color: #000000;
   font-weight: 700;
   font-size: 1.8rem;
 }
@@ -165,14 +165,16 @@
 
 /* Button */
 .plan-box.life .buy-btn {
-  background: linear-gradient(90deg, #7b1fa2, #ab47bc, #ce93d8);
-  box-shadow: 0 0 15px rgba(171, 71, 188, 0.5);
+  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
+  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  color: #fff;
 }
 
 .plan-box.life .buy-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(156, 39, 176, 0.7),
-              inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 0 25px rgba(255, 0, 0, 0.7),
+    inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
 .plan-box.life:hover {
@@ -182,10 +184,12 @@
 
 /* PLATINUM PLAN*/
 
+/* ⭐ REAL PLATINUM PLAN (Silver + Metallic White) ⭐ */
+
 .plan-box.platinum {
-  background: linear-gradient(145deg, #fff9c4, #ffecb3, #fff8e1);
-  border-top: 6px solid #fbc02d;
-  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
+  border-top: 6px solid #b0bec5; /* soft platinum border */
+  box-shadow: 0 8px 25px rgba(176, 190, 197, 0.3);
   transition: all 0.4s ease;
   border-radius: 14px;
   position: relative;
@@ -193,9 +197,10 @@
 
 .plan-box.platinum:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(96, 125, 139, 0.3);
+  box-shadow: 0 15px 40px rgba(120, 144, 156, 0.4);
 }
 
+/* Shine effect */
 .plan-box.platinum::before {
   content: "";
   position: absolute;
@@ -206,7 +211,7 @@
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.35),
     rgba(255, 255, 255, 0.1)
   );
   transition: all 0.6s ease;
@@ -216,34 +221,39 @@
   left: 100%;
 }
 
+/* Title */
 .plan-box.platinum h2 {
-  color: #f57f17;
+  color: #000000; 
   font-weight: 700;
 }
 
+/* Price */
 .plan-box.platinum .price {
-  color: #f9a825;
+  color: #455a64; /* deep metallic grey */
   font-size: 2.2rem;
   font-weight: 800;
-  text-shadow: 0 2px 5px rgba(249, 168, 37, 0.25);
+  text-shadow: 0 2px 5px rgba(69, 90, 100, 0.25);
 }
 
+/* Button (Red as you prefer) */
 .plan-box.platinum .buy-btn {
-  background: linear-gradient(90deg, #f57f17, #fbc02d, #ffe082);
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+ background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
+  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  color: #fff;
 }
 
 .plan-box.platinum .buy-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(255, 193, 7, 0.7),
-              inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 0 25px rgba(255, 0, 0, 0.7),
+    inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
 /*  GOLD PLAN  */
 
 .plan-box.gold {
-  background: linear-gradient(145deg, #f5f5f5, #e0e0e0, #fafafa);
-  border-top: 6px solid #607d8b;
+background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
+  border-top: 6px solid #fbc02d;
   box-shadow: 0 8px 25px rgba(96, 125, 139, 0.2);
   border-radius: 14px;
   transition: all 0.4s ease;
@@ -257,7 +267,12 @@
   left: -100%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+   background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.1)
+  );
   transition: all 0.6s ease;
 }
 
@@ -266,26 +281,29 @@
 }
 
 .plan-box.gold h2 {
-  color: #37474f;
+  color: #000000;
   font-weight: 700;
   font-size: 1.8rem;
 }
 
 .plan-box.gold .price {
-  color: #455a64;
+  color: #f9a825;
   font-size: 2.2rem;
   font-weight: 800;
+    text-shadow: 0 2px 5px rgba(249, 168, 37, 0.25);
 }
 
 .plan-box.gold .buy-btn {
-  background: linear-gradient(90deg, #607d8b, #90a4ae, #b0bec5);
-  box-shadow: 0 0 15px rgba(96, 125, 139, 0.4);
+  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
+  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  color: #fff;
 }
 
 .plan-box.gold .buy-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(96, 125, 139, 0.6),
-              inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 0 25px rgba(255, 0, 0, 0.7),
+    inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
 .plan-box.gold:hover {
@@ -296,10 +314,10 @@
 /* SILVER PLAN */
 
 .plan-box.silver {
-  background: linear-gradient(145deg, #e3f2fd, #bbdefb, #e8f5fe);
-  border-top: 6px solid #1976d2;
+background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
+  border-top: 6px solid #52545a;
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.2);
+  box-shadow: 0 8px 25px rgba(70, 70, 70, 0.2);
   transition: all 0.4s ease;
 }
 
@@ -319,31 +337,34 @@
 }
 
 .plan-box.silver h2 {
-  color: #0d47a1;
+  color: #000000;
   font-weight: 700;
   font-size: 1.8rem;
 }
 
 .plan-box.silver .price {
-  color: #1565c0;
+  color: #555252;
   font-size: 2.2rem;
   font-weight: 800;
 }
 
 .plan-box.silver .buy-btn {
-  background: linear-gradient(90deg, #1976d2, #42a5f5, #64b5f6);
-  box-shadow: 0 0 15px rgba(33,150,243,0.4);
+  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
+  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  color: #fff;
 }
 
 .plan-box.silver .buy-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 25px rgba(33,150,243,0.6),
-              inset 0 0 10px rgba(255,255,255,0.4);
+  box-shadow: 
+    0 0 25px rgba(255, 0, 0, 0.7),
+    inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
+
 
 .plan-box.silver:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(33,150,243,0.3);
+  box-shadow: 0 15px 40px rgba(76, 77, 78, 0.3);
 }
 
 /* RESPONSIVE */

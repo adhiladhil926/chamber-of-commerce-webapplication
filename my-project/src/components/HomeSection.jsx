@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../components/HomeSection.css";
-// import banner from "../assets/download.jpg";
 import apj from "../assets/sir.png";
-import forum1 from "../assets/yes.jpg";
 import chaatLogo from "../assets/chaat.jpg";
 import weLogo from "../assets/event5.jpg";
-import weLogo1 from "../assets/we1.jpg";
-import meeting1 from "../assets/download.jpg";
-import meeting2 from "../assets/event1.jpg";
-import meeting3 from "../assets/event2.jpg";
-// import meeting4 from "../assets/event3.jpg";
-import gallery from "../assets/gallery.jpg";
-import gallery1 from "../assets/gallery1.jpg";
-import events from "../assets/events.jpg";
-import img1 from "../assets/event3.jpg";
 import img2 from "../assets/event4.jpg";
 import img3 from "../assets/event5.jpg";
 import img4 from "../assets/event6.jpg";
 import img5 from "../assets/event7.jpg";
 import img6 from "../assets/event8.jpg";
-// import img7 from "../assets/event10.jpg";
 import event11 from "../assets/event11.jpg";
 import img16 from "../assets/event12.jpg";
 import img17 from "../assets/event13.jpg";
@@ -36,8 +24,6 @@ import img29 from "../assets/event25.jpg";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
 
-
-
 const HomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -49,16 +35,14 @@ const HomeSection = () => {
   const galleryImages = [
     { thumbnail: event11, large: event11, alt: "Business Event 1" },
     { thumbnail: weLogo, large: weLogo, alt: "Business Event 2" },
-    { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
+    // { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
     { thumbnail: img16, large: img16, alt: "Business Event 4" },
   ];
   //gallery section
   const images = [
     img28,img29,img30,img31,img27,
     img18,img19,img20,img21,img22,img23,
-    event11, img17, img16, meeting2, meeting3,
-    forum1, weLogo1,
-    events, img1,
+    event11, img17, img16, 
     img2, img3,
     img4, img5,
     img6,

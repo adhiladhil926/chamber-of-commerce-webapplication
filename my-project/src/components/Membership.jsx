@@ -15,11 +15,18 @@ const Membership = () => {
     {
       "name": "life",
       "price": "Rs.1,00,000 ",
-
+      "gst": "  + GST  (18%) ",
       "features": [
         "✔️ Lifetime validity",
         "✔️ No renewal fees",
-        "✔️ 10 Life Members will represent the Board"
+        "✔️ 10 Life Members will represent the Board",
+        "✔️ All monthly Publications/magazines will be send to the members",
+         "✔️ Keralanadham  E-paper Subscription (One year)",
+         "✔️ All official publications of the Chamber will be send to members.",
+"✔️ Right to participate in all programms conducted by the Chamber.",
+"✔️ Concessional rates applicable for training programmes.",
+"✔️ Regular updates and information shared from time to time.",
+"✔️ Right to receive guidance,support and assistance from the Chanber.",
       ]
     },
 
@@ -27,30 +34,50 @@ const Membership = () => {
     {
       "name": "platinum  ",
       "price": "Rs.25,000",
-
+      "gst": "  + GST  (18%) ",
       "features": [
         "✔️ Renewal fee applicable",
         "✔️ 10 members will represent  the Board",
-         "✔️ 20members only"
+        "✔️ 20members only",
+        "✔️ All monthly Publications/magazines will be send to the members",
+ "✔️ Keralanadham  E-paper Subscription (6 Months)",
+ "✔️ All official publications of the Chamber will be send to members.",
+"✔️ Right to participate in all programms conducted by the Chamber.",
+"✔️ Concessional rates applicable for training programmes.",
+"✔️ Regular updates and information shared from time to time.",
+"✔️ Right to receive guidance,support and assistance from the Chanber.",
       ]
     },
     {
       "name": "gold",
       "price": "Rs.10,000",
-      "gst": "  gst Included (18%) ",
+      "gst": "  + GST  (18%) ",
       "features": [
         "✔️ Renewal fee applicable.",
         "✔️ 5 members will represent the Board",
-
+        "✔️ All monthly Publications/magazines will be send to the members",
+         " ✔️ Keralanadham  E-paper Subscription  (3 Months)",
+         "✔️ All official publications of the Chamber will be send to members.",
+"✔️ Right to participate in all programms conducted by the Chamber.",
+"✔️ Concessional rates applicable for training programmes.",
+"✔️ Regular updates and information shared from time to time.",
+"✔️ Right to receive guidance,support and assistance from the Chanber.",
       ]
     },
     {
       "name": "silver",
       "price": "Rs. 500",
-
+      "gst": "  + GST  (18%) ",
       "features": [
         "✔️ General category (No voting rights)",
-        "✔️ Validity: 1 year"
+        "✔️ Validity: 1 year",
+        "✔️ All monthly Publications/magazines will be send to the members through online",
+        "✔️ All official publications of the Chamber will be send to members.",
+"✔️ Right to participate in all programms conducted by the Chamber.",
+"✔️ Concessional rates applicable for training programmes.",
+"✔️ Regular updates and information shared from time to time.",
+"✔️ Right to receive guidance,support and assistance from the Chanber.",
+       "❌ Keralanadham  E-paper Subscription "
       ]
     },
 
@@ -79,6 +106,7 @@ const Membership = () => {
               <div className="plan-content">
                 <h2>{plan.name}</h2>
                 <h3 className="price">{plan.price}</h3>
+              
                 <hr />
                 <ul className="features">
                   {plan.features.map((feature, i) => (
@@ -87,20 +115,20 @@ const Membership = () => {
                 </ul>
               </div>
               <button className="buy-btn" onClick={() => handleBuy(plan)}>REGISTER</button>
-             
+
             </div>))}
           </div>
-<div className="key-features-box">
-  <h2 className="key-features-title">Key Features</h2>
+          {/* <div className="key-features-box">
+            <h2 className="key-features-title">Key Features</h2>
 
-  <ul className="key-features-list">
-    <li>All official publications of the Chamber will be send to members.</li>
-    <li>Right to participate in all programms conducted by the Chamber.</li>
-    <li>Concessional rates applicable for training programmes.</li>
-    <li>Regular updates and information shared from time to time.</li>
-    <li>Right to receive guidance,support and assistance from the Chanber.</li>
-  </ul>
-</div>
+            <ul className="key-features-list">
+              <li>All official publications of the Chamber will be send to members.</li>
+              <li>Right to participate in all programms conducted by the Chamber.</li>
+              <li>Concessional rates applicable for training programmes.</li>
+              <li>Regular updates and information shared from time to time.</li>
+              <li>Right to receive guidance,support and assistance from the Chanber.</li>
+            </ul>
+          </div> */}
 
         </div>
 

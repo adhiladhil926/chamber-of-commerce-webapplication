@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Vision.css";
 import banner from "../assets/theme.jpg";
-import events from "../assets/events.jpg";
+// import events from "../assets/events.jpg";
 import yesLogo from "../assets/yes.jpg";
 import chaatLogo from "../assets/gallery.jpg";
-import weLogo from "../assets/events.jpg"; 
+import weLogo from "../assets/event18.jpg"; 
 import we1 from "../assets/we1.jpg"; 
+import we2 from "../assets/event17.jpg";
+import we3 from "../assets/event25.jpg";
+import we4 from "../assets/event23.jpg";
+import we5 from "../assets/event22.jpg";
 
 function Vision() {
  const [animate, setAnimate] = useState(false);
@@ -34,7 +38,7 @@ function Vision() {
   <div className="about-content-2">
     <div className="about-image-2">
       {/* revival img */}
-      <img src={events} alt="Chamber Event" />
+      <img src={we2} alt="Chamber Event" />
     </div>
     <div className="about-text-2">
    
@@ -57,7 +61,7 @@ function Vision() {
         <h2>Connecting Businesses, Empowering Communities</h2>
         <div className="forums-container">
           <div className="forum-card">
-            <img src={yesLogo} alt="YES" />
+            <img src={we3} alt="YES" />
             <h3>Guided Inception</h3>
             <p>
              We assist aspiring entrepreneurs in identifying viable industries, 
@@ -65,17 +69,17 @@ function Vision() {
             </p>
           </div>
           <div className="forum-card">
-            <img src={chaatLogo} alt="ChaAT" />
+            <img src={we4} alt="ChaAT" />
             <h3>Voice of Support</h3>
             <p>We represent the MSME sector's interests to the government, influencing favourable policies and legislation.</p>
           </div>
           <div className="forum-card">
-            <img src={weLogo} alt="WE" />
+            <img src={we5} alt="WE" />
             <h3>Reviving Industries</h3>
             <p>We assist struggling enterprises by facilitating connections with financial institutions and offering technical and marketing support to recover and grow.</p>
           </div>
            <div className="forum-card">
-            <img src={we1} alt="WE" />
+            <img src={weLogo} alt="WE" />
             <h3>NRI Focus</h3>
             <p>Delivering dedicated, unified support for returning NRIs, helping them transition their global experience into successful, stable enterprises in Kerala.</p>
           </div>
