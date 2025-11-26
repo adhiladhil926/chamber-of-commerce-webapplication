@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Vision.css";
 import banner from "../assets/theme.jpg";
-// import events from "../assets/events.jpg";
-import yesLogo from "../assets/yes.jpg";
-import chaatLogo from "../assets/gallery.jpg";
 import weLogo from "../assets/event18.jpg"; 
-import we1 from "../assets/we1.jpg"; 
 import we2 from "../assets/event17.jpg";
 import we3 from "../assets/event25.jpg";
 import we4 from "../assets/event23.jpg";

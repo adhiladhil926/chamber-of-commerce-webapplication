@@ -35,7 +35,6 @@ const HomeSection = () => {
   const galleryImages = [
     { thumbnail: event11, large: event11, alt: "Business Event 1" },
     { thumbnail: weLogo, large: weLogo, alt: "Business Event 2" },
-    // { thumbnail: weLogo1, large: weLogo1, alt: "Business Event 3" },
     { thumbnail: img16, large: img16, alt: "Business Event 4" },
   ];
   //gallery section

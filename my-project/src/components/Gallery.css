@@ -1,6 +1,3 @@
-/* ===========================
-   EXISTING CSS (unchanged)
-=========================== */
 
 .activity-wrapper {
   opacity: 0;
@@ -51,7 +48,7 @@
 /* GALLERY GRID */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* <-- REQUIRED FOR HEADINGS */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 25px;
   padding: 60px 0px 0;
   max-width: 1400px;
@@ -173,11 +170,6 @@
     height: 230px;
   }
 }
-
-
-/* =========================================
-   ⭐ NEW — HEADING ROW FOR PHOTOS & VIDEOS
-========================================= */
 
 .heading-row {
   max-width: 1400px;

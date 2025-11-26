@@ -2,11 +2,9 @@
 import React, { useState, useEffect } from "react";
 import "./Membership.css"
 import banner from "../assets/theme.jpg";
-// import { useNavigate } from "react-router-dom"
 
 const Membership = () => {
   const [animate, setAnimate] = useState(false);
-  // const navigate = useNavigate();
   const handleBuy = () => {
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSf3IpAiWu1dJzKRT_7d3MTKWQJzS-_OAQ3zF5ScWoL_GmCwbw/viewform?usp=preview", "_blank");
   };
@@ -118,18 +116,6 @@ const Membership = () => {
 
             </div>))}
           </div>
-          {/* <div className="key-features-box">
-            <h2 className="key-features-title">Key Features</h2>
-
-            <ul className="key-features-list">
-              <li>All official publications of the Chamber will be send to members.</li>
-              <li>Right to participate in all programms conducted by the Chamber.</li>
-              <li>Concessional rates applicable for training programmes.</li>
-              <li>Regular updates and information shared from time to time.</li>
-              <li>Right to receive guidance,support and assistance from the Chanber.</li>
-            </ul>
-          </div> */}
-
         </div>
 
       </div>

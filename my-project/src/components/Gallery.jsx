@@ -7,7 +7,6 @@ import img10 from "../assets/event5.jpg";
 import img11 from "../assets/event6.jpg";
 import img12 from "../assets/event7.jpg";
 import img13 from "../assets/event8.jpg";
-import img14 from "../assets/event10.jpg";
 import img15 from "../assets/event11.jpg";
 import img16 from "../assets/event12.jpg";
 import img18 from "../assets/event14.jpg";
