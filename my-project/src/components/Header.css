@@ -1,3 +1,4 @@
+/* ================= HEADER ================= */
 .header {
   display: flex;
   align-items: center;
@@ -12,13 +13,11 @@
   gap: 20px;    
 }
 
-
 /* LOGO + TAGLINE */
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -37,22 +36,20 @@
   white-space: nowrap;
 }
 
-
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   align-items: center;
   gap: 25px;
-  transition: all 0.3s ease;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .navbar a {
   text-decoration: none;
   color: #333;
-   font-weight: 600;
-    /* font-size: 110%; */
+  font-weight: 600;
   padding: 5px 0;
   transition: color 0.3s ease;
 }
@@ -60,7 +57,6 @@
 .navbar a:hover {
   color: #bbbfdf;
 }
-
 
 /* HIGHLIGHT BUTTON */
 .navbar .highlight {
@@ -80,14 +76,13 @@
   box-shadow: 0 12px 35px rgba(241, 39, 17, 0.45);
 }
 
-
-/* DROPDOWN */
+/* DROPDOWN MENU */
 .dropdown-menu {
   position: absolute;
   top: 40px;
   left: 0;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -108,8 +103,36 @@
   border-radius: 6px;
 }
 
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
 
-/* TABLET */
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .navbar {
     gap: 15px;
@@ -117,24 +140,55 @@
   }
 }
 
-
-/* MOBILE */
+/* Mobile */
 @media (max-width: 900px) {
   .header {
     flex-direction: column;
     text-align: center;
   }
 
+  .hamburger {
+    display: flex;
+    margin-right: 100%;
+  }
+
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    gap: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar .highlight {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
   }
 }
 
-
-
+/* Extra small phones */
 @media (max-width: 600px) {
-
   .logo {
     height: 65px;   
   }
@@ -144,16 +198,10 @@
   }
 
   .navbar {
-    flex-direction: column;
     gap: 12px;
   }
 
   .navbar a {
     font-size: 0.9rem;
-  }
-
-  .navbar .highlight {
-    width: 100%;
-    text-align: center;
   }
 }

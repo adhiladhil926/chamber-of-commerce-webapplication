@@ -65,7 +65,7 @@ const Membership = () => {
       features: [
         "✔️ Renewal fee applicable",
         "✔️ 5 members will represent the Board",
-        "✔️ All monthly Publications/magazines will be send to the members",
+        "✔️ All monthly Publications / magazines will be send to the members",
         "✔️ Keralanadham E-paper Subscription (⭐3 Months)",
         "✔️ All official publications of the Chamber will be send to members.",
         "✔️ Right to participate in all programms conducted by the Chamber.",
@@ -83,7 +83,7 @@ const Membership = () => {
       features: [
         "✔️ General category (No voting rights)",
         "✔️ Validity: 1 year",
-        "✔️ All monthly Publications/magazines will be send to the members through online",
+        "✔️ All monthly Publications / magazines will be send to the members through online",
         "✔️  All official publications of the Chamber will be send to members.",
         "✔️ Right to participate in all programms conducted by the Chamber.",
         "✔️ Concessional rates applicable for training programmes.",
