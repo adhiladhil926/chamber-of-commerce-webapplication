@@ -4,7 +4,7 @@ import "../components/Header.css";
 import logo from "../assets/CCIMSME-logo.jpg";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false); 
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -27,17 +27,33 @@ const Header = () => {
       </div>
 
       <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-        <Link to="/">HOME</Link>
+        <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
 
-       
+        <Link to="/Vision" className="nav-link" onClick={() => setMenuOpen(false)}>
+          VISION
+        </Link>
 
-        <Link to="/Vision" className="nav-link">VISION</Link>
-        <Link to="/about" className="nav-link">ABOUT US</Link>
-        <Link to="/activity">OUR ACTIVITIES</Link>
-        <Link to="/gallery">GALLERY</Link>
-        <Link to="/contact">CONTACT US</Link>
-        <Link to="/membership" className="highlight">MemberShip 👑</Link>
+        <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
+          ABOUT US
+        </Link>
+
+        <Link to="/activity" onClick={() => setMenuOpen(false)}>
+          OUR ACTIVITIES
+        </Link>
+
+        <Link to="/gallery" onClick={() => setMenuOpen(false)}>
+          GALLERY
+        </Link>
+
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>
+          CONTACT US
+        </Link>
+
+        <Link to="/membership" className="highlight" onClick={() => setMenuOpen(false)}>
+          MemberShip 👑
+        </Link>
       </nav>
+
     </header>
   );
 };
