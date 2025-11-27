@@ -105,6 +105,8 @@
 
 .features li {
   margin-bottom: 8px;
+   font-weight: 600;
+   font-size: medium;
 }
 
 .buy-btn {
@@ -127,7 +129,7 @@
 
 .plan-box.life {
  background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
-  border-top: 6px solid #7b1fa2;
+  border-top: 6px solid #ac58cf;
   border-radius: 14px;
   box-shadow: 0 8px 25px rgba(123, 31, 162, 0.15),
               inset 0 0 10px rgba(255, 255, 255, 0.4);
@@ -157,7 +159,7 @@
 
 /* Price */
 .plan-box.life .price {
-  color: #4a148c;
+  color:#ac58cf;
   font-size: 2.2rem;
   font-weight: 800;
   text-shadow: 0 2px 5px rgba(74, 20, 140, 0.25);
@@ -165,8 +167,8 @@
 
 /* Button */
 .plan-box.life .buy-btn {
-  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
-  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  background: linear-gradient(90deg, #ff1a1a, #ff1a1a, #ff1a1a);
+  box-shadow: 0 0 15px #ff1a1a(180, 0, 0, 0.45);
   color: #fff;
 }
 
@@ -237,15 +239,15 @@ background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
 
 /* Button (Red as you prefer) */
 .plan-box.platinum .buy-btn {
- background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
-  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+  background: linear-gradient(90deg, #ff1a1a, #ff1a1a, #ff1a1a);
+  box-shadow: 0 0 15px #ff1a1a(180, 0, 0, 0.45);
   color: #fff;
 }
 
 .plan-box.platinum .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 
-    0 0 25px rgba(255, 0, 0, 0.7),
+    0 0 25px #ff1a1a(255, 0, 0, 0.7),
     inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
@@ -294,15 +296,15 @@ background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
 }
 
 .plan-box.gold .buy-btn {
-  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
-  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+   background: linear-gradient(90deg, #ff1a1a, #ff1a1a, #ff1a1a);
+  box-shadow: 0 0 15px #ff1a1a(180, 0, 0, 0.45);
   color: #fff;
 }
 
 .plan-box.gold .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 
-    0 0 25px rgba(255, 0, 0, 0.7),
+    0 0 25px #ff1a1a(255, 0, 0, 0.7),
     inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
@@ -349,15 +351,15 @@ background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
 }
 
 .plan-box.silver .buy-btn {
-  background: linear-gradient(90deg, #7a0000, #c40000, #ff1a1a);
-  box-shadow: 0 0 15px rgba(180, 0, 0, 0.45);
+   background: linear-gradient(90deg, #ff1a1a, #ff1a1a, #ff1a1a);
+  box-shadow: 0 0 15px #ff1a1a(180, 0, 0, 0.45);
   color: #fff;
 }
 
 .plan-box.silver .buy-btn:hover {
   transform: scale(1.08);
   box-shadow: 
-    0 0 25px rgba(255, 0, 0, 0.7),
+    0 0 25px #ff1a1a(255, 0, 0, 0.7),
     inset 0 0 12px rgba(255, 210, 210, 0.5);
 }
 
@@ -432,3 +434,41 @@ background: linear-gradient(145deg, #ffffff, #ffffff, #ffffff);
     align-items: center;
   }
 }
+
+.plan-header-img {
+  width: 100%;
+  height: 200px;
+  margin-top: -20px;
+  overflow: hidden;
+}
+
+.plan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Prevent hover shine from affecting the image */
+.plan-header-img,
+.plan-img {
+  position: relative;
+  z-index: 5 !important;
+}
+
+/* Keep overlays in background */
+.plan-box::before,
+.plan-box.life::before,
+.plan-box.platinum::before,
+.plan-box.gold::before,
+.plan-box.silver::before {
+  z-index: 0 !important;
+}
+
+/* Keep text/content above overlay */
+/* .plan-content,
+.plan-box h2,
+.price,
+.buy-btn,
+.features {
+  position: relative;
+  z-index: 5 !important;
+} */

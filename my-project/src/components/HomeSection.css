@@ -31,9 +31,6 @@ width: 100%;
   animation: heroFadeIn 1.2s ease-in-out;
 }
 
-
-
-
  .hero-section:hover .hero-image {
   transform: scale(1.06);
 } 
