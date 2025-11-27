@@ -14,7 +14,9 @@ const Header = () => {
     <header className="header">
       <div className="header-left">
         <div className="logo-container">
-          <img src={logo} alt="Chamber Logo" className="logo" />
+          <Link to="/">
+            <img src={logo} alt="Chamber Logo" className="logo" />
+          </Link>
           <h3 className="logo-tagline">
             New Impetus for Industrial Growth in Kerala
           </h3>
