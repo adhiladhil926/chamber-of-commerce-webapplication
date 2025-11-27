@@ -8,8 +8,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-/* HERO SECTION  */
 .about-hero {
   position: relative;
   width: 100%;
@@ -36,12 +34,11 @@
   color: #fff;
   font-size: 3rem;
   font-weight: 700;
-  z-index: 2;
   letter-spacing: 1px;
 }
 
 
-/*  ABOUT SECTION  */
+/* ABOUT SECTION 1 */
 .about-section {
   width: 100%;
   padding: 80px 10%;
@@ -54,22 +51,22 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 60px;
   flex-wrap: wrap;
+  gap: 60px;
 }
 
+/* Images Collage */
 .about-images {
   flex: 1;
-  position: relative;
-  overflow: hidden;
   max-width: 550px;
-  margin-top: 15%;
+  position: relative;
+  margin-top: 7%;
+  overflow: hidden;
 }
 
 .vision {
-  
-  position: relative;      
-  display: inline-block;   
+  position: relative;
+  display: inline-block;
 }
 
 .vision::after {
@@ -86,7 +83,7 @@
 .image-collage {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -104,8 +101,8 @@
 
 .img-1 {
   top: 20%;
-  left: 0;
-  width: 60%;
+  left: -76px;
+  width: 75%;
   z-index: 1;
 }
 
@@ -119,10 +116,11 @@
 .img-3 {
   bottom: 0;
   left: 20%;
-  width: 70%;
+  width: 75%;
   z-index: 3;
 }
 
+/* Text Section */
 .about-text {
   flex: 1.2;
   color: #333;
@@ -137,60 +135,43 @@
 .about-text h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  color: #2e3ca9; 
+  margin: 25px 0 15px;
+  color: #2e3ca9;
   border-left: 4px solid #0077b6;
   padding-left: 12px;
-}
-
-.about-text1 h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #000000;
-  text-align: center;
 }
 
 .about-text p {
   font-size: 1rem;
   line-height: 1.8;
-  margin-bottom: 15px;
   color: #555;
   text-align: justify;
+  margin-bottom: 15px;
 }
 
-/*  ABOUT SECTION 2 */
-.about-section-2.reverse .about-content-2 {
-  flex-direction: row-reverse;
-  gap: 40px;
-  width: 100%;
-  overflow: hidden;
-}
 
 .about-section-2 {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f1f1f1;
-  width: 100%;
+  background: #f1f1f1;
+}
+
+.about-section-2.reverse .about-content-2 {
+  flex-direction: row-reverse;
 }
 
 .about-content-2 {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .about-text-2 {
   flex: 1;
   min-width: 300px;
-  text-align: left;
 }
 
-.about-text h2,
 .about-text-2 h2 {
   position: relative;
   display: inline-block;
@@ -220,35 +201,22 @@
   color: #555;
   line-height: 1.8;
   text-align: justify;
-  margin-bottom: 20px;
-}
-
-
-.about-image-2 {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 50px;
-  margin-left: 20px;
 }
 
 .about-image-2 img {
   width: 100%;
   max-width: 650px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/*  RESPONSIVE ABOUT  */
 @media (max-width: 900px) {
   .about-content,
   .about-content-2,
   .about-section-2.reverse .about-content-2 {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
   .about-images {
@@ -262,55 +230,40 @@
   .hero-overlay h1 {
     font-size: 2.2rem;
   }
-
-  .about-image-2 img {
-    max-width: 100%;
-  }
 }
 
-/*  ABOUT TEXT 1  */
 .about-text1 {
   max-width: 900px;
   margin: 50px auto;
   padding: 30px 20px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.8;
   color: #333;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 .about-text1 h4 {
   color: #ff6f61;
-  font-size: 1.2rem;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .about-text1 h2 {
   font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 30px;
-  color: #000000;
+  font-weight: 700;
 }
 
 .about-text1 h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  color: #2e3ca9; 
+  color: #2e3ca9;
+  margin: 25px 0 15px;
   border-left: 4px solid #ff6f61;
   padding-left: 12px;
 }
-
-.about-text1 p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
 @media (max-width: 768px) {
   .about-text1 {
     padding: 20px 15px;
@@ -323,19 +276,14 @@
   .about-text1 h3 {
     font-size: 1.3rem;
   }
-
-  .about-text1 p {
-    font-size: 0.95rem;
-  }
 }
 
-/* CHAMBER HIGHLIGHTS  */
 .highlights-section {
   position: relative;
-  background-size: cover;
-  background-position: 10% 30%;
-  color: #fff;
   padding: 100px 20px;
+  background-position: 10% 30%;
+  background-size: cover;
+  color: #fff;
 }
 
 .highlights-overlay {
@@ -349,20 +297,20 @@
 }
 
 .highlights-header h5 {
-  font-size: 1rem;
-  color: #e0e0e0;
-  text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #e0e0e0;
 }
 
 .highlights-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
 }
 
-/* HIGHLIGHTS GRID  */
+
+/* Highlights Grid */
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -370,7 +318,6 @@
   max-width: 1400px;
   margin: 0 auto;
   justify-items: center;
-  align-items: stretch;
 }
 
 @media (max-width: 1200px) {
@@ -394,19 +341,17 @@
   }
 }
 
+/* Highlight Cards */
 .highlight-card {
   background: linear-gradient(145deg, #ffffff, #f0f2ff);
-  color: #000;
   padding: 25px;
   width: 100%;
   min-width: 260px;
-  height: auto;
+  cursor: pointer;
   position: relative;
   text-align: left;
+  transition: 0.4s;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  transition: all 0.4s ease;
-  overflow: hidden;
-  cursor: pointer;
 }
 
 .highlight-card:hover {
@@ -419,107 +364,95 @@
 .highlight-number {
   width: 70px;
   height: 70px;
-  background: #2e3ca9;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
   position: absolute;
   top: -25px;
   left: 25px;
-  box-shadow: 0 5px 15px rgba(46, 60, 169, 0.4);
-  transition: all 0.4s ease;
+  border-radius: 50%;
+  background: #2e3ca9;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
 }
 
 .highlight-card:hover .highlight-number {
+  transform: rotate(15deg);
   background: #ffce3d;
   color: #000;
-  transform: rotate(15deg);
 }
 
 .highlight-card h3 {
   margin-top: 60px;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #2e3ca9; /* unified color */
-  margin-bottom: 15px;
+  color: #2e3ca9;
 }
 
 .highlight-card li {
-  font-size: 1rem;
-  color: #000000;
+  color: #000;
   line-height: 1.8;
 }
 
-/*  GALLERY SECTION  */
+
+
+/* ============================================================
+   GALLERY SECTION
+============================================================ */
 .gallery-section {
-  text-align: center;
   padding: 100px 20px;
-  background-color: #ffffff;
-  position: relative;
+  background: #fff;
+  text-align: center;
   overflow: hidden;
 }
 
 .gallery-section h3 {
   color: #2e3ca9;
-  text-transform: uppercase;
-  font-size: 1rem;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .gallery-section h2 {
   font-size: 2.2rem;
-  margin-bottom: 50px;
-  color: #111;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 
+/* Controls */
 .gallery-controls {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
   gap: 25px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .arrow-btn {
-  background: #2e3ca9;
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  border-radius: 50%;
   width: 55px;
   height: 55px;
+  margin-top: 155px;
+  border: none;
+  font-size: 2rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  background: #2e3ca9;
+  color: #fff;
+  transition: 0.3s;
   box-shadow: 0 5px 15px rgba(46, 60, 169, 0.3);
 }
 
-.arrow-btn:hover:not(:disabled),
-.arrow-btn:active {
+.arrow-btn:hover {
   transform: scale(1.1);
-  background: #1d287a;
 }
 
-.arrow-btn:focus {
-  outline: none;
-  box-shadow: 0 5px 15px rgba(46, 60, 169, 0.4);
-}
-
-/*  GALLERY GRID  */
+/* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
   max-width: 1200px;
-  margin: 0 auto;
-  transition: opacity 0.3s ease;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {
@@ -534,27 +467,25 @@
   }
 }
 
+/* Image cards */
 .gallery-card {
-  position: relative;
   height: 230px;
   overflow: hidden;
-  background: #fff;
+  background: white;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
+  transition: 0.4s;
   cursor: pointer;
 }
 
 .gallery-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.3s ease;
-  border-radius: 12px;
+  transition: 0.4s;
 }
 
 .gallery-card:hover img {
@@ -562,52 +493,26 @@
   filter: brightness(1.1);
 }
 
-.gallery-card::after {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  background: rgba(46, 60, 169, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-card:hover::after {
-  opacity: 1;
-}
-
-.gallery-page {
-  margin-top: 25px;
-  color: #444;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-/*LIGHTBOX*/
+/* 
+   LIGHTBOX*/
 .lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
 .lightbox-content {
-  position: relative;
   max-width: 90%;
   max-height: 90%;
+  position: relative;
 }
 
 .lightbox-content img {
   width: 100%;
-  height: auto;
 }
 
 .close-btn {
