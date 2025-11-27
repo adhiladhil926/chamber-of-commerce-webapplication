@@ -1,4 +1,3 @@
-/* ================= HEADER ================= */
 .header {
   display: flex;
   align-items: center;
@@ -36,7 +35,7 @@
   white-space: nowrap;
 }
 
-/* ================= NAVBAR ================= */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -103,7 +102,7 @@
   border-radius: 6px;
 }
 
-/* ================= HAMBURGER ================= */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -129,79 +128,53 @@
 .bar.open:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-
-/* ================= MEDIA QUERIES ================= */
-
-/* Tablet */
 @media (max-width: 1024px) {
   .navbar {
     gap: 15px;
     font-size: 0.95rem;
   }
 }
-
-/* Mobile */
 @media (max-width: 900px) {
   .header {
     flex-direction: column;
     text-align: center;
   }
 
+  /* Hamburger icon */
   .hamburger {
     display: flex;
-    margin-right: 100%;
+    margin-right: auto;
   }
+
 
   .navbar {
-    display: none;
+    position: fixed;
+    top: 0;
+   left: -100%;        
+    height: 100vh;
+    width: 70%;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.25);
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    background: #fff;
-    gap: 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    margin-top: 10px;
+    padding-top: 80px;
+    transition: right 0.4s ease;  
+    z-index: 3000;
   }
 
+  /* When menu is open */
   .navbar.open {
-    display: flex;
+    left: 0;  
   }
 
   .navbar a {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
+    padding: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1rem;
   }
 
   .navbar .highlight {
-    width: 90%;
-    margin: 10px auto;
-    text-align: center;
-  }
-
-  .dropdown-menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    box-shadow: none;
-    border-radius: 0;
-  }
-}
-
-/* Extra small phones */
-@media (max-width: 600px) {
-  .logo {
-    height: 65px;   
-  }
-
-  .logo-tagline {
-    font-size: 12px;
-  }
-
-  .navbar {
-    gap: 12px;
-  }
-
-  .navbar a {
-    font-size: 0.9rem;
+    margin: 15px auto;
+    width: 80%;
   }
 }

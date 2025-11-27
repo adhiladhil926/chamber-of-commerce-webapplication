@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Membership.css";
 import banner from "../assets/theme.jpg";
-
-// Images for plans
 import goldImg from "../assets/gold.jpg";
 import silverImg from "../assets/silver.jpg";
 import platinumImg from "../assets/platinum.jpg";
@@ -122,11 +120,11 @@ const Membership = () => {
                 key={index}
               >
                 {/* ⭐ IMAGE HEADER */}
-               <div className="plan-header-img">
-  <img src={plan.img} alt={plan.name} className="plan-img" />
-</div>
+                <div className="plan-header-img">
+                  <img src={plan.img} alt={plan.name} className="plan-img" />
+                </div>
                 {/* CONTENT */}
-                <div className="plan-content">                
+                <div className="plan-content">
                   <hr />
 
                   <ul className="features">

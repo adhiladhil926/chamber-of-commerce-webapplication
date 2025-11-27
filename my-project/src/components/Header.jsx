@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, } from "react";
 import { Link } from "react-router-dom";
 import "../components/Header.css";
 import logo from "../assets/CCIMSME-logo.jpg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); 
-  
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -20,8 +20,6 @@ const Header = () => {
           </h3>
         </div>
       </div>
-
-      {/* Hamburger icon */}
       <div className="hamburger" onClick={toggleMenu}>
         <span className={`bar ${menuOpen ? "open" : ""}`}></span>
         <span className={`bar ${menuOpen ? "open" : ""}`}></span>
