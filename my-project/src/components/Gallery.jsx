@@ -23,13 +23,13 @@ import img28 from "../assets/event24.jpg";
 import img29 from "../assets/event25.jpg";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
-import img32 from "../assets/i1.jpg";
-import img33 from "../assets/i2.jpg";
-import img34 from "../assets/i3.jpg";
-import img35 from "../assets/i4.jpg";
-import img36 from "../assets/i5.jpg";
-import img37 from "../assets/i6.jpg";
-import img38 from "../assets/i7.jpg";
+import img32 from "../assets/i1.webp";
+import img33 from "../assets/i2.webp";
+import img34 from "../assets/i3.webp";
+import img35 from "../assets/i4.webp";
+import img36 from "../assets/i5.webp";
+import img37 from "../assets/i6.webp";
+import img38 from "../assets/i7.webp";
 
 
 const Gallery = () => {
