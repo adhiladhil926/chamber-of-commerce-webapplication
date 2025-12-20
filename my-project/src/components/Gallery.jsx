@@ -23,6 +23,14 @@ import img28 from "../assets/event24.jpg";
 import img29 from "../assets/event25.jpg";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
+import img32 from "../assets/i1.jpg";
+import img33 from "../assets/i2.jpg";
+import img34 from "../assets/i3.jpg";
+import img35 from "../assets/i4.jpg";
+import img36 from "../assets/i5.jpg";
+import img37 from "../assets/i6.jpg";
+import img38 from "../assets/i7.jpg";
+
 
 const Gallery = () => {
   const [animate, setAnimate] = useState(false);
@@ -30,6 +38,8 @@ const Gallery = () => {
   const [videoUrl, setVideoUrl] = useState(null);
 
   const images = [
+    img32, img33, img34, img35, img36,
+    img37, img38,
     img28, img29, img30, img31,
     img15, img16, img18, img19,
     img20, img21, img22, img23,
