@@ -120,7 +120,7 @@ const HomeSection = () => {
         <section >
           <div className="info-section">
             <div className="info-left">
-              <img src={revivalImg[revival]} alt="Who We Are" className={`info-image fade-in`} />
+              <img src={revivalImg[revival]} alt="Who We Are" className={`info-image fade-in`} loading="lazy" />
             </div>
 
             <div className="info-right">

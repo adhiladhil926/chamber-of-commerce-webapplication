@@ -102,6 +102,7 @@ function Activity() {
           <div className="gallery-main">
             {galleryImages.map((img, index) => (
               <img
+              loading="lazy"
                 key={index}
                 src={img.large}
                 alt={img.alt}
@@ -115,6 +116,7 @@ function Activity() {
           <div className="gallery-thumbs">
             {galleryImages.map((img, index) => (
               <img
+              loading="lazy"
                 key={index}
                 src={img.thumbnail}
                 alt={img.alt}

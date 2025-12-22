@@ -120,7 +120,7 @@ const Gallery = () => {
                   className="gallery-item"
                   onClick={() => setLightboxIndex(images.indexOf(item.src))}
                 >
-                  <img src={item.src} alt="" />
+                  <img src={item.src} alt="" loading="lazy" />
                 </div>
               );
             }
@@ -133,7 +133,7 @@ const Gallery = () => {
                   className="gallery-item youtube-box"
                   onClick={() => setVideoUrl(item.url)}
                 >
-                  <img src={`https://img.youtube.com/vi/${videoID}/hqdefault.jpg`} />
+                  <img src={`https://img.youtube.com/vi/${videoID}/hqdefault.jpg`} loading="lazy" />
                   <span className="youtube-play-btn">▶</span>
                 </div>
               );

@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 // imgs
-import event2 from "../assets/event2.jpg";
-import event1 from "../assets/event1.jpg";
-import events from "../assets/events.jpg";
-import event3 from "../assets/event4.jpg";
 import banner from "../assets/theme.jpg";
-import meeting1 from "../assets/events.jpg";
-import meeting2 from "../assets/event10.jpg";
-import meeting3 from "../assets/we.jpg";
-import meeting4 from "../assets/gallery.jpg";
-import meeting5 from "../assets/download.jpg";
-import meeting6 from "../assets/event6.jpg";
-import meeting7 from "../assets/event7.jpg";
-import meeting8 from "../assets/event8.jpg";
-import meeting9 from "../assets/event10.jpg";
 import meeting10 from "../assets/event5.jpg";
 import meeting11 from "../assets/chaat.jpg";
-
 import img15 from "../assets/event11.jpg";
 import img16 from "../assets/event12.jpg";
 import img17 from "../assets/event13.jpg";
@@ -35,14 +21,11 @@ import img29 from "../assets/event25.jpg";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
 
-
-
-
 const AboutUs = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
-
+ 
   const highlights = [
     {
       id: 1,
@@ -134,9 +117,9 @@ const AboutUs = () => {
             <div className="image-collage">
 
               {/* Our journey */}
-              <img src={meeting10} alt="Event 1" className="img img-1" />
-          <img src={img22} alt="Event 2" className="img img-2" />
-              <img src={meeting11} alt="Event 3" className="img img-3" />
+              <img src={meeting10} alt="Event 1" className="img img-1" loading="lazy"/>
+          <img src={img22} alt="Event 2" className="img img-2" loading="lazy"/>
+              <img src={meeting11} alt="Event 3" className="img img-3" loading="lazy" />
             </div>
           </div>
 
@@ -180,7 +163,7 @@ const AboutUs = () => {
                 key={index}
                 className="gallery-card"
               >
-                <img src={img} alt={`Event ${index}`} />
+                <img src={img} alt={`Event ${index}`} loading="lazy" />
               </div>
             ))}
           </div>
@@ -204,7 +187,7 @@ const AboutUs = () => {
               className="lightbox-content"
               onClick={(e) => e.stopPropagation()}
             >
-              <img src={selectedImage} alt="Expanded" />
+              <img src={selectedImage} alt="Expanded" loading="lazy"/>
               <button
                 className="close-btn"
                 onClick={() => setSelectedImage(null)}
@@ -221,7 +204,7 @@ const AboutUs = () => {
         <div className="about-content-2">
           <div className="about-image-2">
             {/* Revival-img */}
-            <img src={img21} alt="Chamber Event" />
+            <img src={img21} alt="Chamber Event" loading="lazy"/>
           </div>
 
           <div className="about-text-2">
