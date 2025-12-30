@@ -195,41 +195,6 @@ body {
   border-radius: 2px;
 }
 
-.forums-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.forum-card {
-  width: 350px;
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.forum-card:hover {
-  transform: translateY(-5px);
-}
-
-.forum-card img {
-  height: 160px;
-  width: 69%;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.forum-card h3 {
-  color: #3f51b5;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
 .forum-card p {
   color: #000;
   font-size: 1rem;

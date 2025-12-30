@@ -48,6 +48,7 @@ const Gallery = () => {
   ];
 
   const videos = [
+    "https://www.youtube.com/watch?v=-_pioF579Qs",
     "https://youtu.be/MTjFZm6t7oc?si=ZYI0O-feg4S2LuXm",
     "https://youtu.be/jLZ06leBbK8?si=WK7exqhkO59ye4sd",
     "https://youtu.be/8cQ4NVcHykg?si=v3FgTwwVyFErsI-k",
