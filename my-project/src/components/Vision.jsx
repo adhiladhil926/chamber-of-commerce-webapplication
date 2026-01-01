@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Vision.css";
-import banner from "../assets/theme.jpg";
+import banner from "../assets/theme.webp";
 import weLogo from "../assets/event18.jpg"; 
 import we2 from "../assets/event17.jpg";
 import we3 from "../assets/event25.webp";

@@ -1,5 +1,5 @@
 import "./Activity.css";
-import banner from "../assets/theme.jpg"; 
+import banner from "../assets/theme.webp"; 
 import React, { useEffect, useState } from "react";
 
 

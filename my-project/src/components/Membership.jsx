@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Membership.css";
-import banner from "../assets/theme.jpg";
+import banner from "../assets/theme.webp";
 import goldImg from "../assets/gold.jpg";
 import silverImg from "../assets/silver.jpg";
 import platinumImg from "../assets/platinum.jpg";

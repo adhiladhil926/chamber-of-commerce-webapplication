@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Gallery.css";
-import banner from "../assets/theme.jpg";
+import banner from "../assets/theme.webp";
 
 import img9 from "../assets/event4.jpg";
 import img10 from "../assets/event5.jpg";
@@ -94,7 +94,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
+      <div loading='lazy' className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
         
         <section
           className="about-hero1"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./AboutUs.css";
 // imgs
-import banner from "../assets/theme.jpg";
+import banner from "../assets/theme.webp";
 import meeting10 from "../assets/event5.jpg";
 import meeting11 from "../assets/chaat.jpg";
 import img15 from "../assets/i4.webp";

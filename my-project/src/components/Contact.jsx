@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Contact.css";
-import banner from "../assets/theme.jpg";
+import banner from "../assets/theme.webp";
 import QR from "../assets/qr.jpeg"
 
 const Contact = () => {
