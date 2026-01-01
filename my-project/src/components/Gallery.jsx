@@ -20,7 +20,7 @@ import img25 from "../assets/event21.jpg";
 import img26 from "../assets/event22.jpg";
 import img27 from "../assets/event23.jpg";
 import img28 from "../assets/event24.jpg";
-import img29 from "../assets/event25.jpg";
+import img29 from "../assets/event25.webp";
 import img30 from "../assets/event26.jpg";
 import img31 from "../assets/event27.jpg";
 import img32 from "../assets/i1.webp";

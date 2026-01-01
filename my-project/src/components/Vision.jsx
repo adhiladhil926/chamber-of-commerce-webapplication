@@ -3,7 +3,7 @@ import "./Vision.css";
 import banner from "../assets/theme.jpg";
 import weLogo from "../assets/event18.jpg"; 
 import we2 from "../assets/event17.jpg";
-import we3 from "../assets/event25.jpg";
+import we3 from "../assets/event25.webp";
 import we4 from "../assets/event23.jpg";
 import we5 from "../assets/event22.jpg";
 import img38 from "../assets/i7.webp";
