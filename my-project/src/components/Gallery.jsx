@@ -16,6 +16,7 @@ import img21 from "../assets/event17.webp";
 import img22 from "../assets/event18.webp";
 import img23 from "../assets/event19.webp";
 import img24 from "../assets/event22.webp";
+import img25 from "../assets/event21.webp";
 import img27 from "../assets/event23.webp";
 import img28 from "../assets/event24.webp";
 import img29 from "../assets/event25.webp";
