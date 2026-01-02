@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Gallery.css";
 import banner from "../assets/theme.webp";
-
 import img9 from "../assets/event4.webp";
 import img10 from "../assets/event5.jpg";
 import img11 from "../assets/event6.jpg";
 import img12 from "../assets/event7.jpg";
-import img13 from "../assets/event8.jpg";
 import img15 from "../assets/event11.webp";
 import img16 from "../assets/event12.webp";
 import img18 from "../assets/event14.webp";
@@ -30,6 +28,7 @@ import img35 from "../assets/i4.webp";
 import img36 from "../assets/i5.webp";
 import img37 from "../assets/i6.webp";
 import img38 from "../assets/i7.webp";
+import img39 from "../assets/i8.webp";
 
 
 const Gallery = () => {
@@ -42,9 +41,9 @@ const Gallery = () => {
     img37, img38,
     img28, img29, img30, img31,
     img15, img16, img18, img19,
-    img20, img21, img22, img23,
+    img20, img21, img39, img22, img23,
     img25, img24, img26, img27,
-    img9, img10, img11, img12, img13
+ img9,img10, img11, img12, 
   ];
 
   const videos = [
@@ -54,6 +53,7 @@ const Gallery = () => {
     "https://youtu.be/8cQ4NVcHykg?si=v3FgTwwVyFErsI-k",
     "https://youtu.be/1_O7XhFYVSs?si=zBdRhlGFL52xgjwr",
     "https://youtu.be/WYq11Zb1S5o?si=-eSvCA4IabUL92vN",
+    
     
     "https://youtu.be/ivxepdPe4gM?si=8yfgHWWfXGoPhQWA",
     "https://youtu.be/Shy35rNcWq0?si=x1kA7ntObtRAHm4u",
@@ -78,15 +78,24 @@ const Gallery = () => {
   let imgIndex = 0;
   let videoIndex = 0;
 
-  while (imgIndex < images.length) {
-    mixedGallery.push({ type: "img", src: images[imgIndex++] });
-    mixedGallery.push({ type: "img", src: images[imgIndex++] });
-    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+ while (imgIndex < images.length || videoIndex < videos.length) {
 
-    if (videos[videoIndex]) {
-      mixedGallery.push({ type: "video", url: videos[videoIndex++] });
-    }
+  if (imgIndex < images.length) {
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
   }
+
+  if (imgIndex < images.length) {
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+  }
+
+  if (imgIndex < images.length) {
+    mixedGallery.push({ type: "img", src: images[imgIndex++] });
+  }
+
+  if (videoIndex < videos.length) {
+    mixedGallery.push({ type: "video", url: videos[videoIndex++] });
+  }
+}
 
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100);

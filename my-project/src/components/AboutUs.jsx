@@ -144,24 +144,24 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <div className="gallery-section">
+      <div className="gallery-section1">
         <h3>Our Gallery</h3>
         <h2>Chamber Events & Highlights</h2>
 
-        <div className="gallery-controls">
+        <div className="gallery-controls1">
           <button
             onClick={prevImages}
             disabled={currentIndex === 0}
-            className="arrow-btn"
+            className="arrow-btn1"
           >
             &#8592;
           </button>
 
-          <div className="gallery-grid">
+          <div className="gallery-grid1">
             {visibleImages.map((img, index) => (
               <div
                 key={index}
-                className="gallery-card"
+                className="gallery-card1"
               >
                 <img src={img} alt={`Event ${index}`} loading="lazy" />
               </div>
@@ -171,7 +171,7 @@ const AboutUs = () => {
           <button
             onClick={nextImages}
             disabled={currentIndex === totalPages - 1}
-            className="arrow-btn"
+            className="arrow-btn1"
           >
             &#8594;
           </button>

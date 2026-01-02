@@ -401,38 +401,38 @@
 /* ============================================================
    GALLERY SECTION
 ============================================================ */
-.gallery-section {
+.gallery-section1 {
   padding: 100px 20px;
   background: #fff;
   text-align: center;
   overflow: hidden;
 }
 
-.gallery-section h3 {
+.gallery-section1 h3 {
   color: #2e3ca9;
   letter-spacing: 2px;
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.gallery-section h2 {
+.gallery-section1 h2 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 50px;
 }
 
 /* Controls */
-.gallery-controls {
+.gallery-controls1 {
   display: flex;
   gap: 25px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.arrow-btn {
+.arrow-btn1 {
   width: 55px;
   height: 55px;
-  margin-top: 155px;
+  margin-top: 95px;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -442,33 +442,33 @@
   box-shadow: 0 5px 15px rgba(46, 60, 169, 0.3);
 }
 
-.arrow-btn:hover {
+.arrow-btn1:hover {
   transform: scale(1.1);
 }
 
 /* Gallery Grid */
-.gallery-grid {
+.gallery-grid1 {
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   max-width: 1200px;
   margin: auto;
 }
 
 @media (max-width: 1024px) {
-  .gallery-grid {
+  .gallery-grid1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .gallery-grid {
+  .gallery-grid1 {
     grid-template-columns: 1fr;
   }
 }
 
 /* Image cards */
-.gallery-card {
+.gallery-card1 {
   height: 230px;
   overflow: hidden;
   background: white;
@@ -477,18 +477,18 @@
   cursor: pointer;
 }
 
-.gallery-card:hover {
+.gallery-card1:hover {
   transform: translateY(-6px) scale(1.03);
 }
 
-.gallery-card img {
+.gallery-card1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.4s;
 }
 
-.gallery-card:hover img {
+.gallery-card1:hover img {
   transform: scale(1.1);
   filter: brightness(1.1);
 }
