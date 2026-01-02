@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Vision.css";
 import banner from "../assets/theme.webp";
-import weLogo from "../assets/event18.jpg"; 
-import we2 from "../assets/event17.jpg";
+import weLogo from "../assets/event18.webp"; 
+import we2 from "../assets/event17.webp";
 import we3 from "../assets/event25.webp";
-import we4 from "../assets/event23.jpg";
-import we5 from "../assets/event22.jpg";
+import we4 from "../assets/event23.webp";
+import we5 from "../assets/event22.webp";
 import img38 from "../assets/i7.webp";
 
 function Vision() {

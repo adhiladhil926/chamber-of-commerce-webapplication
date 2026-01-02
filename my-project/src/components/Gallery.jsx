@@ -2,27 +2,25 @@ import React, { useState, useEffect } from "react";
 import "./Gallery.css";
 import banner from "../assets/theme.webp";
 
-import img9 from "../assets/event4.jpg";
+import img9 from "../assets/event4.webp";
 import img10 from "../assets/event5.jpg";
 import img11 from "../assets/event6.jpg";
 import img12 from "../assets/event7.jpg";
 import img13 from "../assets/event8.jpg";
-import img15 from "../assets/event11.jpg";
-import img16 from "../assets/event12.jpg";
-import img18 from "../assets/event14.jpg";
-import img19 from "../assets/event15.jpg";
-import img20 from "../assets/event16.jpg";
-import img21 from "../assets/event17.jpg";
-import img22 from "../assets/event18.jpg";
-import img23 from "../assets/event19.jpg";
-import img24 from "../assets/event20.jpg";
-import img25 from "../assets/event21.jpg";
-import img26 from "../assets/event22.jpg";
-import img27 from "../assets/event23.jpg";
-import img28 from "../assets/event24.jpg";
+import img15 from "../assets/event11.webp";
+import img16 from "../assets/event12.webp";
+import img18 from "../assets/event14.webp";
+import img19 from "../assets/event15.webp";
+import img20 from "../assets/event16.webp";
+import img21 from "../assets/event17.webp";
+import img22 from "../assets/event18.webp";
+import img23 from "../assets/event19.webp";
+import img24 from "../assets/event22.webp";
+import img27 from "../assets/event23.webp";
+import img28 from "../assets/event24.webp";
 import img29 from "../assets/event25.webp";
-import img30 from "../assets/event26.jpg";
-import img31 from "../assets/event27.jpg";
+import img30 from "../assets/event26.webp";
+import img31 from "../assets/event27.webp";
 import img32 from "../assets/i1.webp";
 import img33 from "../assets/i2.webp";
 import img34 from "../assets/i3.webp";
@@ -94,7 +92,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div loading='lazy' className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
+      <div className={`activity-wrapper ${animate ? "page-enter" : ""}`}>
         
         <section
           className="about-hero1"
