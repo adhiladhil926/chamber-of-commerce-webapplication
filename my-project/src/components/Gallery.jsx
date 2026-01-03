@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./Gallery.css";
 import banner from "../assets/theme.webp";
-import img9 from "../assets/event4.webp";
-import img10 from "../assets/event5.jpg";
-import img11 from "../assets/event6.jpg";
-import img12 from "../assets/event7.jpg";
-import img15 from "../assets/event11.webp";
-import img16 from "../assets/event12.webp";
-import img18 from "../assets/event14.webp";
-import img19 from "../assets/event15.webp";
-import img20 from "../assets/event16.webp";
-import img21 from "../assets/event17.webp";
-import img22 from "../assets/event18.webp";
-import img23 from "../assets/event19.webp";
-import img24 from "../assets/event20.webp";
-import img25 from "../assets/event21.webp";
-import img26 from "../assets/event22.webp";
-import img27 from "../assets/event23.webp";
-import img28 from "../assets/event24.webp";
-import img29 from "../assets/event25.webp";
-import img30 from "../assets/event26.webp";
-import img31 from "../assets/event27.webp";
-import img32 from "../assets/i1.webp";
-import img33 from "../assets/i2.webp";
-import img34 from "../assets/i3.webp";
-import img35 from "../assets/i4.webp";
-import img36 from "../assets/i5.webp";
-import img37 from "../assets/i6.webp";
-import img38 from "../assets/i7.webp";
-import img39 from "../assets/i8.webp";
+// import img9 from "../assets/event4.webp";
+// import img10 from "../assets/event5.jpg";
+// import img11 from "../assets/event6.jpg";
+// import img12 from "../assets/event7.jpg";
+// import img15 from "../assets/event11.webp";
+// import img16 from "../assets/event12.webp";
+// import img18 from "../assets/event14.webp";
+// import img19 from "../assets/event15.webp";
+// import img20 from "../assets/event16.webp";
+// import img21 from "../assets/event17.webp";
+// import img22 from "../assets/event18.webp";
+// import img23 from "../assets/event19.webp";
+// import img24 from "../assets/event20.webp";
+// import img25 from "../assets/event21.webp";
+// import img26 from "../assets/event22.webp";
+// import img27 from "../assets/event23.webp";
+// import img28 from "../assets/event24.webp";
+// import img29 from "../assets/event25.webp";
+// import img30 from "../assets/event26.webp";
+// import img31 from "../assets/event27.webp";
+// import img32 from "../assets/i1.webp";
+// import img33 from "../assets/i2.webp";
+// import img34 from "../assets/i3.webp";
+// import img35 from "../assets/i4.webp";
+// import img36 from "../assets/i5.webp";
+// import img37 from "../assets/i6.webp";
+// import img38 from "../assets/i7.webp";
+// import img39 from "../assets/i8.webp";
 
 
 const Gallery = () => {
@@ -37,14 +37,42 @@ const Gallery = () => {
   const [videoUrl, setVideoUrl] = useState(null);
 
   const images = [
-    img32, img33, img34, img35, img36,
-    img37, img38,
-    img28, img29, img30, img31,
-    img15, img16, img18, img19,
-    img20, img21, img39, img22, img23,
-    img25, img24, img26, img27,
- img9,img10, img11, img12, 
-  ];
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355137/i1_vsr829.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355138/i2_lj4ki0.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355139/i3_jtknsa.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355139/i4_ntbk0h.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355139/i5_qvzouc.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355140/i6_vorfna.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355141/i7_rv0mjq.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355141/i8_q2ndbn.webp",
+
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355134/event27_xwqrns.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355134/event26_acavlx.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355134/event25_yzf6x7.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355132/event24_z99prk.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355131/event23_oumymz.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355130/event21_ohfdvt.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355131/event22_fjr4ov.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355130/event20_pcyk8d.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355130/event19_hzpn80.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355130/event18_guq6lq.webp",
+
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355124/event4_xeyq3z.webp",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355122/event5_j2bu1u.jpg",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355123/event6_fdbzv3.jpg",
+  "https://res.cloudinary.com/dztowmiew/image/upload/v1767355124/event7_oumqfe.jpg"
+];
+
+
+//   const images = [
+//     img32, img33, img34, img35, img36,
+//     img37, img38,
+//     img28, img29, img30, img31,
+//     img15, img16, img18, img19,
+//     img20, img21, img39, img22, img23,
+//     img25, img24, img26, img27,
+//  img9,img10, img11, img12, 
+//   ];
 
   const videos = [
     "https://www.youtube.com/watch?v=-_pioF579Qs",
