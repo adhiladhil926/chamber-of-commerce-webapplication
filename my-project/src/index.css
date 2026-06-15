@@ -1,58 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-:root{
-  --max-page-width: 1200px;
-  --page-side-padding: 20px;
-  --break-lg: 1024px;
-  --break-md: 768px;
-  --break-sm: 576px;
+:root {
+  --bg-color: #ffffff;
+  --bg-secondary: #f8fafc;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  
+  --border-color: #e2e8f0;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  
+  --font-main: 'Inter', sans-serif;
+  --transition: all 0.2s ease-in-out;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-
-/* Make images and videos scale */
-img, picture, video, svg { max-width: 100%; height: auto; display: block; }
-
-/* Fluid page wrapper */
-.container {
-  width: 100%;
-  max-width: var(--max-page-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--page-side-padding);
-  padding-right: var(--page-side-padding);
-}
-
-/* Common responsive helpers */
-.row { display:flex; flex-wrap:wrap; gap: 24px; }
-.col { flex:1 1 0; min-width:0; }
-
-/* Adjust base font sizing on small screens */
-@media (max-width: 480px) {
-  html { font-size: 14px; }
-}
 * {
-  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html, body, #root {
-  font-family: "Poppins", sans-serif;
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Override all serif fonts to Poppins */
-h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label {
-  font-family: "Poppins", sans-serif !important;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
 }
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
 
-  .hero-section {
-    padding: 20px 10px;
-  }
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Typography Utilities */
+.text-center { text-align: center; }
+.text-secondary { color: var(--text-secondary); }
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* Card Styling for Landing Page */
+.info-card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+/* Content blocks */
+.content-block {
+  margin-bottom: 2rem;
+}
+
+.content-block h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-block p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.content-block ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.content-block li {
+  margin-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }

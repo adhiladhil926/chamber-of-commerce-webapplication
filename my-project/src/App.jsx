@@ -9,6 +9,7 @@ import Membership from "./components/Membership";
 import Contact from "./components/Contact"; 
 import Gallery from "./components/Gallery";
 import Activity from "./components/Activity";
+import Cmsi from "./components/Cmsi";
 // import MembershipForm from "./components/Membership-form";
 // import PaymentOptions from "./components/PaymentOption";
 import Vision from "./components/Vision";
@@ -30,6 +31,7 @@ function App() {
             {/* <Route path="/payment-options" element={<PaymentOptions />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery/>} /> 
+        <Route path="/cmsi" element={<Cmsi/>} /> 
           <Route path="/vision" element={<Vision/>} /> 
          <Route path="/activity" element={<Activity/>} /> 
       </Routes>

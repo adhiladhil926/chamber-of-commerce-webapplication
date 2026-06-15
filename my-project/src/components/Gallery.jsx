@@ -81,8 +81,7 @@ const Gallery = () => {
     "https://youtu.be/8cQ4NVcHykg?si=v3FgTwwVyFErsI-k",
     "https://youtu.be/1_O7XhFYVSs?si=zBdRhlGFL52xgjwr",
     "https://youtu.be/WYq11Zb1S5o?si=-eSvCA4IabUL92vN",
-    
-    
+   
     "https://youtu.be/ivxepdPe4gM?si=8yfgHWWfXGoPhQWA",
     "https://youtu.be/Shy35rNcWq0?si=x1kA7ntObtRAHm4u",
   ];

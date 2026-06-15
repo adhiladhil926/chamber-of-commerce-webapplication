@@ -47,6 +47,10 @@ const Header = () => {
           GALLERY
         </Link>
 
+        <Link to="/cmsi" onClick={() => setMenuOpen(false)}>
+          CMSI
+        </Link>
+
         <Link to="/contact" onClick={() => setMenuOpen(false)}>
           CONTACT US
         </Link>
