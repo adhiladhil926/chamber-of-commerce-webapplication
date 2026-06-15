@@ -20,7 +20,7 @@ function LandingPage() {
       {/* Daily Updates Section */}
       <section className="section">
         <h2 className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <BookOpen color="var(--accent-color)" /> MSME Thrissur Daily Updates & Alerts
+          <BookOpen color="var(--accent-color)" /> MSME  Daily Updates & Alerts
         </h2>
         <div className="grid-2">
           <InfoCard title="Subsidy Disbursal Camp">
