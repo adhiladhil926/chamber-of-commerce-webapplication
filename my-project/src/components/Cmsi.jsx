@@ -11,7 +11,7 @@ function LandingPage() {
     <div className="container">
       {/* Hero Section */}
       <section className="section text-center" style={{ paddingBottom: '2rem' }}>
-        <h1 className="section-title">CCMSME Helpline & Portal</h1>
+        <h1 className="section-title">CCIMSME Helpline & Portal</h1>
         <p className="section-description" style={{ margin: '0 auto' }}>
           Your ultimate, exhaustive guide to starting, managing, funding, and scaling your business in Kerala. We provide deep-dive explanations on every law, clearance, tax regulation, subsidy, and digital initiative to ensure total ease of doing business for entrepreneurs.
         </p>
