@@ -48,7 +48,7 @@ const Header = () => {
         </Link>
 
         <Link to="/cmsi" onClick={() => setMenuOpen(false)}>
-          CMSI
+          INDUSTRY SUPPORT
         </Link>
 
         <Link to="/contact" onClick={() => setMenuOpen(false)}>
