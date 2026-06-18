@@ -1,22 +1,61 @@
 import React from 'react';
+// import './Cmsi.css';
 import InfoCard from '../components/InfoCard';
-import { 
-  BookOpen, Building2, ExternalLink, ShieldCheck, IndianRupee, Rocket, Globe, 
-  Calculator, HardHat, Leaf, Flame, Briefcase, Award, FileSignature, Cpu,
-  Sun, Laptop, Gavel, Factory, Scale, FileText, Lightbulb, Coins, TrendingUp, Droplet, ShieldAlert, Barcode
-} from 'lucide-react';
+import banner from "../assets/theme.webp";
 
+import {
+  BookOpen,
+  Building2,
+  ExternalLink,
+  ShieldCheck,
+  IndianRupee,
+  Rocket,
+  Globe,
+  Calculator,
+  HardHat,
+  Leaf,
+  Flame,
+  Briefcase,
+  Award,
+  FileSignature,
+  Cpu,
+  Sun,
+  Laptop,
+  Gavel,
+  Factory,
+  Scale,
+  FileText,
+  Lightbulb,
+  Coins,
+  TrendingUp,
+  Droplet,
+  ShieldAlert,
+  Barcode
+} from "lucide-react";
 function LandingPage() {
   return (
-    <div className="container">
-      {/* Hero Section */}
-      <section className="section text-center" style={{ paddingBottom: '2rem' }}>
-        <h1 className="section-title">CCIMSME Helpline & Portal</h1>
-        <p className="section-description" style={{ margin: '0 auto' }}>
-          Your ultimate, exhaustive guide to starting, managing, funding, and scaling your business in Kerala. We provide deep-dive explanations on every law, clearance, tax regulation, subsidy, and digital initiative to ensure total ease of doing business for entrepreneurs.
-        </p>
-      </section>
+    <div className="container cmsi-page">
 
+    <section class="ccimsme-hero">
+  <div class="hero-content">
+    <span class="hero-badge">MSME • Startup Support • Industrial Support • Business Growth </span>
+
+    <h1>CCIMSME Helpline & Portal</h1>
+
+    <p>
+      Your ultimate, exhaustive guide to starting, managing, funding,
+      and scaling your business in Kerala. We provide deep-dive
+      explanations on every law, clearance, tax regulation, subsidy,
+      and digital initiative to ensure total ease of doing business
+      for entrepreneurs.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Explore Resources</a>
+      {/* <a href="#" class="btn-secondary">Business Schemes</a> */}
+    </div>
+  </div>
+</section>
       {/* Daily Updates Section */}
       <section className="section">
         <h2 className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -45,6 +84,297 @@ function LandingPage() {
           </InfoCard>
         </div>
       </section>
+
+      {/* MSME, Startup & Government Schemes Knowledge Hub */}
+
+<section className="section">
+  <h2
+    className="section-title"
+    style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+  >
+    <TrendingUp color="var(--accent-color)" />
+    MSME, Startup & Government Schemes Updates 2026
+  </h2>
+
+  <p className="section-description">
+    Comprehensive information on registrations, startup support,
+    government funding, cluster development, food business compliance,
+    fisheries development, bamboo industries, and entrepreneurship
+    initiatives relevant to Kerala MSMEs and startups.
+  </p>
+
+  {/* FSSAI */}
+
+  <div className="content-block">
+    <h3>
+      <ShieldCheck
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      FSSAI FoSCoS Portal
+    </h3>
+
+    <p>
+      The Food Safety Compliance System (FoSCoS) is the official digital
+      platform of the Food Safety and Standards Authority of India (FSSAI).
+      It is mandatory for food manufacturers, restaurants, bakeries,
+      caterers, food processing units, online food sellers, exporters,
+      importers, storage units and distributors.
+    </p>
+
+    <ul>
+      <li>New FSSAI Registration.</li>
+      <li>State License and Central License applications.</li>
+      <li>License renewal and modifications.</li>
+      <li>Annual return filing.</li>
+      <li>Food product compliance management.</li>
+      <li>Import-export food business approvals.</li>
+    </ul>
+
+    <p>
+      Possessing an FSSAI license improves consumer confidence,
+      facilitates market expansion, supports participation in
+      government tenders, and ensures compliance with food safety laws.
+    </p>
+  </div>
+
+  {/* DIC */}
+
+  <div className="content-block">
+    <h3>
+      <Factory
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      Kerala Directorate of Industries & Commerce (DIC)
+    </h3>
+
+    <p>
+      The Directorate of Industries & Commerce is Kerala's primary
+      institution for MSME promotion and industrial development.
+      District Industries Centres (DICs) act as the first contact point
+      for entrepreneurs seeking guidance, subsidies, registrations,
+      and project support.
+    </p>
+
+    <ul>
+      <li>Entrepreneur Support Scheme (ESS).</li>
+      <li>PMEGP assistance.</li>
+      <li>Industrial infrastructure guidance.</li>
+      <li>Women entrepreneurship promotion.</li>
+      <li>Rural industry development.</li>
+      <li>Manufacturing sector incentives.</li>
+    </ul>
+  </div>
+
+  {/* Bamboo Mission */}
+
+  <div className="content-block">
+    <h3>
+      <Leaf
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      Kerala Bamboo Mission & BambooFest
+    </h3>
+
+    <p>
+      Kerala Bamboo Mission promotes sustainable industrial growth through
+      bamboo-based enterprises. BambooFest exhibitions provide market
+      access, technology demonstrations, product showcases, and business
+      networking opportunities.
+    </p>
+
+    <ul>
+      <li>Bamboo furniture manufacturing.</li>
+      <li>Handicrafts and gift products.</li>
+      <li>Eco-friendly construction materials.</li>
+      <li>Skill development programs.</li>
+      <li>Buyer-Seller meets.</li>
+      <li>Export-oriented product promotion.</li>
+    </ul>
+  </div>
+
+  {/* Startup India */}
+
+  <div className="content-block">
+    <h3>
+      <Rocket
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      Startup India & DPIIT Recognition
+    </h3>
+
+    <p>
+      DPIIT recognition under Startup India provides official startup
+      status and enables access to tax benefits, funding opportunities,
+      patent support, and government procurement advantages.
+    </p>
+
+    <ul>
+      <li>Income Tax exemption opportunities.</li>
+      <li>Angel Tax benefits.</li>
+      <li>Fast-track patent examination.</li>
+      <li>Trademark registration rebates.</li>
+      <li>Startup India Seed Fund Scheme.</li>
+      <li>Fund of Funds ecosystem support.</li>
+      <li>Government procurement benefits.</li>
+    </ul>
+
+    <p>
+      Startups must generally be less than ten years old and operate
+      with an innovative, scalable business model.
+    </p>
+  </div>
+
+  {/* KSUM */}
+
+  <div className="content-block">
+    <h3>
+      <Lightbulb
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      Kerala Startup Mission (KSUM)
+    </h3>
+
+    <p>
+      Kerala Startup Mission is the state's nodal agency for startup
+      development, incubation, innovation grants, and entrepreneurial
+      ecosystem support.
+    </p>
+
+    <ul>
+      <li>Idea Grant Scheme.</li>
+      <li>Seed Funding Programs.</li>
+      <li>Innovation Grants.</li>
+      <li>Incubation Support.</li>
+      <li>Investor Connect Programs.</li>
+      <li>Technology commercialization support.</li>
+    </ul>
+
+    <p>
+      Priority sectors include Artificial Intelligence, Healthcare,
+      Agritech, SaaS, FinTech, Manufacturing Innovation, and Deep-Tech.
+    </p>
+  </div>
+
+  {/* PMMSY */}
+
+  <div className="content-block">
+    <h3>
+      <Droplet
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      PMMSY – Pradhan Mantri Matsya Sampada Yojana
+    </h3>
+
+    <p>
+      PMMSY is India's flagship fisheries sector development programme,
+      supporting aquaculture, fish production, infrastructure creation,
+      value addition, and export competitiveness.
+    </p>
+
+    <ul>
+      <li>Fish farming support.</li>
+      <li>Cold storage assistance.</li>
+      <li>Processing infrastructure.</li>
+      <li>Value addition facilities.</li>
+      <li>Export promotion.</li>
+      <li>Fisheries startup support.</li>
+    </ul>
+  </div>
+
+  {/* BHAVYA */}
+
+  <div className="content-block">
+    <h3>
+      <Briefcase
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      BHAVYA Entrepreneurship Development Scheme
+    </h3>
+
+    <p>
+      BHAVYA focuses on entrepreneurship development, vocational
+      skill enhancement, self-employment generation, and business
+      support for marginalized communities.
+    </p>
+
+    <ul>
+      <li>Entrepreneurship training.</li>
+      <li>Business development support.</li>
+      <li>Financial literacy programmes.</li>
+      <li>Vocational skill development.</li>
+      <li>Employment generation initiatives.</li>
+    </ul>
+  </div>
+
+  {/* Cluster Development */}
+
+  <div className="content-block">
+    <h3>
+      <Building2
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      MSME Cluster Development Programme (MSE-CDP)
+    </h3>
+
+    <p>
+      Cluster Development strengthens groups of MSMEs by providing
+      common facilities, infrastructure, testing centres,
+      design support, and technology upgrades.
+    </p>
+
+    <ul>
+      <li>Common Facility Centres (CFC).</li>
+      <li>Infrastructure development.</li>
+      <li>Technology modernization.</li>
+      <li>Skill development programmes.</li>
+      <li>Export competitiveness support.</li>
+      <li>Shared manufacturing resources.</li>
+    </ul>
+
+    <p>
+      Major beneficiary sectors include Bamboo, Coir,
+      Food Processing, Handicrafts, Engineering,
+      Fisheries and Agro Industries.
+    </p>
+  </div>
+
+  {/* Digital MSME */}
+
+  <div className="content-block">
+    <h3>
+      <Cpu
+        size={18}
+        style={{ display: "inline", marginRight: "5px" }}
+      />
+      MSME Digital Transformation & Sustainable Development
+    </h3>
+
+    <p>
+      Government programmes increasingly encourage adoption of
+      AI technologies, ERP software, cloud computing,
+      cybersecurity frameworks, digital payments,
+      renewable energy systems, and green manufacturing.
+    </p>
+
+    <ul>
+      <li>Artificial Intelligence adoption.</li>
+      <li>Cloud ERP implementation.</li>
+      <li>Cybersecurity strengthening.</li>
+      <li>Renewable energy adoption.</li>
+      <li>Waste management initiatives.</li>
+      <li>Energy efficiency improvements.</li>
+    </ul>
+  </div>
+</section>
+
 
       {/* Legal & Clearances Section */}
       <section className="section">
