@@ -40,7 +40,7 @@ function LandingPage() {
   <div class="hero-content">
     <span class="hero-badge">MSME • Startup Support • Industrial Support • Business Growth </span>
 
-    <h1>CCIMSME Helpline & Portal</h1>
+    <h1>MSME Helpline & Portal</h1>
 
     <p>
       Your ultimate, exhaustive guide to starting, managing, funding,
