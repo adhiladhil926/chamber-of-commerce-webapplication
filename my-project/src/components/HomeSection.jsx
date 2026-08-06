@@ -23,6 +23,8 @@ import img28 from "../assets/event24.webp";
 import img29 from "../assets/event25.webp";
 import img30 from "../assets/event26.webp";
 import img31 from "../assets/event27.webp";
+import img32 from "../assets/m.png";
+
 
 const HomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -89,7 +91,7 @@ const HomeSection = () => {
       <div className={`home-wrapper ${animate ? "page-enter" : ""}`}>
         {/* HERO / BANNER SECTION */}
         <div className="hero-section">
-          <img src={img29} alt="Banner" className="hero-image" loading="lazy" />
+          <img src={img32} alt="Banner" className="hero-image" loading="lazy" />
         </div>
         {/* INFO SECTION */}
         <div className="info-section">
