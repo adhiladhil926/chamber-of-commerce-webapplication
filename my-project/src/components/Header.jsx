@@ -1,65 +1,66 @@
-import React, { useState, } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "../components/Header.css";
 import logo from "../assets/CCIMSME-logo.jpg";
 
+const navItems = [
+  { to: "/", label: "HOME", end: true },
+  { to: "/vision", label: "VISION" },
+  { to: "/about", label: "ABOUT US" },
+  { to: "/activity", label: "OUR ACTIVITIES" },
+  { to: "/gallery", label: "GALLERY" },
+  { to: "/cmsi", label: "INDUSTRY SUPPORT" },
+  { to: "/contact", label: "CONTACT US" },
+];
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <div className="header-left">
         <div className="logo-container">
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="Chamber Logo" className="logo" />
           </Link>
-          <h3 className="logo-tagline">
-            New Impetus for Industrial Growth in Kerala
-          </h3>
+          <h3 className="logo-tagline">New Impetus for Industrial Growth in Kerala</h3>
         </div>
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
+
+      <button
+        type="button"
+        className="hamburger"
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
+      >
         <span className={`bar ${menuOpen ? "open" : ""}`}></span>
         <span className={`bar ${menuOpen ? "open" : ""}`}></span>
         <span className={`bar ${menuOpen ? "open" : ""}`}></span>
-      </div>
+      </button>
 
-      <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
+      <nav className={`navbar ${menuOpen ? "open" : ""}`} aria-label="Main navigation">
+        {navItems.map(({ to, label, end }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={end}
+            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            onClick={closeMenu}
+          >
+            {label}
+          </NavLink>
+        ))}
 
-        <Link to="/Vision" className="nav-link" onClick={() => setMenuOpen(false)}>
-          VISION
-        </Link>
-
-        <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
-          ABOUT US
-        </Link>
-
-        <Link to="/activity" onClick={() => setMenuOpen(false)}>
-          OUR ACTIVITIES
-        </Link>
-
-        <Link to="/gallery" onClick={() => setMenuOpen(false)}>
-          GALLERY
-        </Link>
-
-        <Link to="/cmsi" onClick={() => setMenuOpen(false)}>
-          INDUSTRY SUPPORT
-        </Link>
-
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>
-          CONTACT US
-        </Link>
-
-        <Link to="/membership" className="highlight" onClick={() => setMenuOpen(false)}>
-          MemberShip 👑
-        </Link>
+        <NavLink
+          to="/membership"
+          className={({ isActive }) => `highlight${isActive ? " active" : ""}`}
+          onClick={closeMenu}
+        >
+          MEMBERSHIP
+        </NavLink>
       </nav>
-
     </header>
   );
 };

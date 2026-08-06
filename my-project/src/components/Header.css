@@ -46,15 +46,39 @@
 }
 
 .navbar a {
+  position: relative;
   text-decoration: none;
   color: #333;
   font-weight: 600;
-  padding: 5px 0;
-  transition: color 0.3s ease;
+  padding: 8px 0;
+  transition: color 300ms ease;
 }
 
 .navbar a:hover {
-  color: #bbbfdf;
+  color: #223d9b;
+}
+
+.navbar .nav-link::after,
+.navbar .highlight::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f5af19, #f12711);
+  box-shadow: 0 2px 8px rgba(241, 39, 17, 0.32);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus-visible::after,
+.navbar .nav-link.active::after,
+.navbar .highlight.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 /* HIGHLIGHT BUTTON */
@@ -68,6 +92,14 @@
   letter-spacing: 1px;
   box-shadow: 0 8px 25px rgba(241, 39, 17, 0.35);
   transition: all 0.4s ease;
+}
+
+.navbar .highlight::after {
+  bottom: 4px;
+  width: calc(100% - 28px);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
 }
 
 .navbar .highlight:hover {
@@ -108,6 +140,9 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 6px;
 }
 
 .bar {
@@ -176,5 +211,12 @@
   .navbar .highlight {
     margin: 15px auto;
     width: 80%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar a,
+  .navbar a::after {
+    transition-duration: 0.01ms !important;
   }
 }

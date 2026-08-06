@@ -1,5 +1,5 @@
-import React from 'react';
-// import './Cmsi.css';
+import React, { useEffect, useRef } from 'react';
+import './Cmsi.css';
 import InfoCard from '../components/InfoCard';
 import banner from "../assets/theme.webp";
 
@@ -33,7 +33,42 @@ import {
   Barcode
 } from "lucide-react";
 function LandingPage() {
+  const cubeSceneRef = useRef(null);
+
+  useEffect(() => {
+    const scene = cubeSceneRef.current;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!scene || reduceMotion) return undefined;
+
+    const handlePointerMove = (event) => {
+      const x = event.clientX / window.innerWidth - 0.5;
+      const y = event.clientY / window.innerHeight - 0.5;
+      scene.style.setProperty('--pointer-x', `${x * 20}deg`);
+      scene.style.setProperty('--pointer-y', `${y * -16}deg`);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove, { passive: true });
+    return () => window.removeEventListener('pointermove', handlePointerMove);
+  }, []);
+
   return (
+    <>
+    <div
+      ref={cubeSceneRef}
+      className="industry-cube-scene"
+      style={{ '--cube-image': `url(${banner})` }}
+      aria-hidden="true"
+    >
+      <div className="industry-cube">
+        <div className="industry-cube-face industry-cube-face--front"></div>
+        <div className="industry-cube-face industry-cube-face--right"></div>
+        <div className="industry-cube-face industry-cube-face--back"></div>
+        <div className="industry-cube-face industry-cube-face--left"></div>
+        <div className="industry-cube-face industry-cube-face--top"></div>
+        <div className="industry-cube-face industry-cube-face--bottom"></div>
+      </div>
+    </div>
+
     <div className="container cmsi-page">
 
     <section class="ccimsme-hero">
@@ -61,6 +96,80 @@ function LandingPage() {
         <h2 className="section-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <BookOpen color="var(--accent-color)" /> MSME  Daily Updates & Alerts
         </h2>
+         <div className="msme-content">
+  <p>
+MSME Development (Amendment) Bill, 2026 proposes Digital registration, mandatory TReDS, faster dispute resolution and graded penalties
+The Micro, Small and Medium Enterprises Development (Amendment) Bill, 2026 seeks to modernise the MSME legal framework by proposing digital registration, mandatory TReDS-based invoice settlement, time-bound dispute resolution and stronger enforcement mechanisms.
+On 28 July 2026, the Micro, Small and Medium Enterprises (MSME) Development (Amendment) Bill, 2026, was introduced in the Rajya Sabha, seeking to amend the MSME Development Act, 2006, in line with technological advancements and the evolving business environment.
+The proposed amendment aims to improve access to government benefits, address liquidity concerns of MSMEs, strengthen dispute resolution mechanisms and promote ease of doing business through greater digitalisation,replacement of certain criminal penalties with a graded civil penalty framework and of the expansion of rule-making powers of the Central and State Governments to prescribe the manner and process for implementation.
+Key Highlights
+The Bill amends Section 2 of the MSMED Act, 2006 to introduce the definition of “Development Commissioner” and update certain statutory references.
+Section 3 is proposed to be amended to replace the existing representative on the National Board with the Development Commissioner.
+The proposed amendment to Section 7 retains the existing twin criteria of investment in plant and machinery or equipment and turnover.
+While calculating investment, the Bill proposes to exclude expenditure incurred on the following items to ensure that expenditure on safety, environmental compliance and innovation does not adversely affect an enterprise’s classification:
+Pollution control equipment;
+Research and development;
+Industrial safety devices; and
+Other items notified by the Central Government.
+The Bill proposes to substitute Section 8 to provide for a free and voluntary national digital platform for registration of MSMEs. The proposed platform will enable enterprises to file their registration memorandum electronically and avail benefits and also clarifies that enterprises registered on the national platform may receive benefit of separate State digital platforms under State Government.
+The Bill proposes to insert Section 15A, requiring every Central Public Sector Enterprise (CPSE) to route payments for procurement from MSMEs through the Trade Receivables Discounting System (TReDS), an RBI-authorised electronic platform.
+The provision also empowers the Central and State Governments to extend the TReDS-based invoice settlement mechanism to other public sector enterprises, authorities, bodies and entities.
+The Bill proposes amendment in Section 18 to expedite resolution of delayed payment disputes before the Micro and Small Enterprises Facilitation Council (MSEFC) and expand its jurisdiction by allowing it to entertain disputes where the supplier is registered within its territorial jurisdiction, irrespective of the buyer’s location in India.
+Stage
+Proposed Timeline
+Completion of mediation
+90 days from the first appearance
+Commencement of arbitration after mediation
+Within 30 days of termination of mediation
+Making of arbitral award
+90 days from completion of pleadings
+The proposed Section 18(6) empowers the Central Government to establish an online dispute resolution mechanism for mediation and arbitration through audio-video and other electronic means which include:
+video conferencing;
+electronic filing of pleadings;
+electronic communication;
+recording of evidence; etc.
+The Bill proposes to insert Section 18A, to enable recovery of mediated settlement agreements and arbitral awards as arrears of land revenue through the District Collector, Deputy Commissioner or any other authority notified by the State Government and such awards shall constitute a legally enforceable debt capable of recognition under the Insolvency and Bankruptcy Code, 2016.
+The substituted Section 19 retains the requirement of depositing 75% of the awarded amount before challenging an award and where such challenge remains pending for more than six months, the court shall release at least 50% of the deposited amount to the supplier.
+Provision
+Proposed change
+Deposit before challenge
+75% of awarded amount
+Challenge pending beyond 6 months
+Release of minimum 50% to supplier
+The Bill proposes to substitute Sections 20 and 21 to improve the functioning of Facilitation Councils and provide for:
+establishment of additional Facilitation Councils by State Governments;
+regular meetings for timely disposal of references;
+provision of physical infrastructure, digital systems and trained manpower;
+a Council comprising three to five members; and
+mandatory representation from industry associations and the field of law.
+It also inserts Section 22A, requiring notified Central and State Public Sector Enterprises and other notified entities to disclose details of MSME invoices routed through the TReDS.
+The Bill proposes a graded penalty mechanism for specified contraventions, replacing the existing conviction-based framework with a compliance-oriented framework and the minimum penalties may be increased by 10% every three years, as notified by the Central Government.
+The Bill also designates the Development Commissioner as the adjudicating officer, provides a 30-day appeal period and requires appeals to be disposed of within 60 days.
+Contravention
+Proposed action
+First instance of non-compliance
+Warning
+Second or subsequent non-compliance relating to registration or Section 26
+Penalty of ₹1,000 to ₹50,000
+Second contravention of Section 22
+Penalty of ₹10,000 to ₹50,000
+Third or subsequent contravention of Section 22
+Fine of ₹50,000 to ₹1,00,000
+  </p>
+
+  <div className="pdf-viewer">
+    <iframe
+      src="/MSME_Bill_2026%20(1).pdf"
+      title="MSME Development Amendment Bill 2026"
+    />
+  </div>
+</div>
+        <p className="section-description">
+    Comprehensive information on registrations, startup support,
+    government funding, cluster development, food business compliance,
+    fisheries development, bamboo industries, and entrepreneurship
+    initiatives relevant to Kerala MSMEs and startups.
+  </p>
         <div className="grid-2">
           <InfoCard title="Subsidy Disbursal Camp">
             <p className="text-secondary">
@@ -78,14 +187,13 @@ function LandingPage() {
             </p>
           </InfoCard>
           <InfoCard title="Export Promotion Seminar">
-            <p className="text-secondary">
+            <p className="text-+secondary">
               FIEO (Federation of Indian Export Organisations) is hosting a free seminar on 'Navigating European Markets' for Thrissur-based handicraft and agro-processors.
             </p>
           </InfoCard>
         </div>
       </section>
 
-      {/* MSME, Startup & Government Schemes Knowledge Hub */}
 
 <section className="section">
   <h2
@@ -103,7 +211,6 @@ function LandingPage() {
     initiatives relevant to Kerala MSMEs and startups.
   </p>
 
-  {/* FSSAI */}
 
   <div className="content-block">
     <h3>
@@ -634,6 +741,7 @@ function LandingPage() {
         <p className="text-secondary">© 2026 CCMSME Helpline & Portal. Empowering Entrepreneurs in Kerala.</p>
       </footer> */}
     </div>
+    </>
   );
 }
 
